@@ -1,0 +1,24 @@
+- title: sitemap-draw
+  url: https://github.com/AgrawalAmey/sitemap-draw
+  image: ../images/sitemap-draw.png
+  completed: true
+
+- title: Oasis 2015
+  url: https://www.behance.net/gallery/31060195/Oasis-2015-Main-Websit
+  image: ../images/oasis.jpg
+  completed: true
+
+- title: Apogee 2016
+  url: http://bits-apogee.org
+  image: ../images/apogee.png
+  completed: true
+
+- title: Oasis 2015 beta
+  url: https://www.behance.net/gallery/31060417/Oasis-2015-Beta-Site
+  image: ../images/oasis_beta.jpg
+  completed: true
+
+- title: vectorTech
+  url: agrawalamey.github.io/vector-tech-website/
+  image: ../images/vt.png
+  completed: true
