@@ -1,10 +1,7 @@
 ---
 layout: home
 ---
-# About Theme
 
-This theme is Jekyll port of [vangeltzo.com](http://vangeltzo.com/) (by [Vangelis Tzortzis](https://github.com/srekoble)).
+# About Shannon's Mouse
 
-To learn how to install and use this theme check out the [installation guide](http://taylantatli.me/Halve/halve-theme/) for more information.
-
-If you have a question, find a bug, or just want to say hi, please open an [issue on GitHub](https://github.com/TaylanTatli/Halve/issues/new).
+Lorem ipsum dolor sit amet, ei dico idque iudicabit quo, ei graeco voluptaria cum. Porro apeirian rationibus no eam. Cum ex latine atomorum. Mei maiorum fastidii repudiandae ad. Graece aperiri phaedrum usu an, adhuc dolorum pertinax pri ex.
