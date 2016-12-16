@@ -10,19 +10,33 @@ layout: compress
   <div class="block-left">
     <div class="content">
       <div class="main-info">
-        <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
+        <a href="{{ site.url }}" class="logo"><img class="profile-pic" src="/images/me.png"></a>
         {% include social-links.html %}
       </div>
     </div>
   </div>
 
   <div class="block-right">
-    <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
-    <span class="posts-link">POSTS</span>
-    <a title="project" class="projects-menu-icon">
-      <span></span>
-    </a>
-    <span class="projects-link">PROJECTS</span>
+    <ul class="menu">
+      <li>
+        <a href="{{ site.url }}/posts" title="posts">
+          <i class="fa fa-quote-left posts-icon" aria-hidden="true"></i>
+        </a>  
+        <span class="posts-link">POSTS</span>  
+      </li>
+      <li>
+        <a title="project" onclick="toggleProjects()">
+          <i class="fa fa-archive projects-icon" aria-hidden="true"></i>
+        </a>
+        <span class="projects-link">PROJECTS</span>
+      </li>
+      <li>
+        <a href="/docs/cv.pdf" title="resume">
+          <i class="fa fa-file-text resume-icon" aria-hidden="true"></i>
+        </a>
+        <span class="resume-link">RESUME</span> 
+      </li>
+    </ul>
     <div class="content">
       <div class="about-info">
         {{ content }}

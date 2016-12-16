@@ -7,11 +7,13 @@ $(function() {
 });
 
 // Projects Menu
-$('.projects-menu-icon').click(function() {
+function toggleProjects() {
   $('html').toggleClass('no-scroll');
   $(this).toggleClass('active');
   $('.overlay').toggleClass('show');
-});
+  $('.menu').toggleClass('hide');
+  console.log(12);
+};
   
 // All others
 $(document).ready(function() {

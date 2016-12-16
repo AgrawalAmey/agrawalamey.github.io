@@ -79,7 +79,7 @@ Here is the block you might want to use:
 	http://placehold.it/600x300.jpg
 	http://placehold.it/600x300.jpg
 {% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
+{% include gallery.html images=images caption="Test images" cols=3 %}
 {% endraw %}
 {% endhighlight %}
 
@@ -96,4 +96,4 @@ It will look something like this:
 	http://placehold.it/600x300.jpg
 	http://placehold.it/600x300.jpg
 {% endcapture %}
-{% include gallery images=images caption="Test images" cols=3 %}
+{% include gallery.html images=images caption="Test images" cols=3 %}

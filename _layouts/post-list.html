@@ -9,23 +9,39 @@ layout: compress
 
     <div class="block-left">
       <div class="content">
-        <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/{{ site.smallLogo }}"></a>
-        <h1 class="section-title">{{ page.title}}<em>/</em>
-        </h1>
+        <div class="main-info">
+          <a class="logo"><img src="{{ site.url }}/images/{{ site.logo }}"></a>
+        </div>
       </div>
     </div>
 
     <div class="block-right">
-      <a href="posts.html" title="posts" class="posts-menu-icon"></a>
-      <a title="projects" class="projects-menu-icon">
-        <span></span>
-      </a>
+      <ul class="menu">
+        <li>
+          <a href="{{ site.url }}" title="about">
+            <i class="fa fa-user about-icon" aria-hidden="true"></i>
+          </a>  
+          <span class="about-link">ABOUT</span>  
+        </li>
+        <li>
+          <a onclick="toggleProjects()" title="project">
+            <i class="fa fa-archive projects-icon" aria-hidden="true"></i>
+          </a>
+          <span class="projects-link">PROJECTS</span>
+        </li>
+        <li>
+          <a href="/docs/cv.pdf" title="resume">
+            <i class="fa fa-file-text resume-icon" aria-hidden="true"></i>
+          </a>
+          <span class="resume-link">RESUME</span> 
+        </li>
+      </ul>
       <div class="content">
         <ul class="posts-list">
         {% for post in site.posts %}
           <li>
             <h2>
-              <a href="{{ site.url }}{{ post.url }}" class="post-title">
+              <a href="{{ site.url }}{{ post.url }}" class="post-title()">
                 <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
               </a>
               <span class="date">{{ post.date | date: '%d %b %Y' }}</span>

@@ -1,4 +1,7 @@
 <div class="overlay">
+  <a onclick="toggleProjects()" class="close-button">
+    <i class="fa fa-times-circle" aria-hidden="true"></i>
+  </a>
   <ul class="projects-menu">
     {% for item in site.data.projects %}
       {% capture image %}{{ item.image }}{% endcapture %}
