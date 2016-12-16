@@ -3,14 +3,19 @@
   image: ../images/sitemap-draw.png
   completed: true
 
-- title: Oasis 2015
-  url: https://www.behance.net/gallery/31060195/Oasis-2015-Main-Websit
-  image: ../images/oasis.jpg
+- title: Lacuna 2016
+  url: http://bits-apogee.org/2016/lacuna/
+  image: ../images/apogee.png
   completed: true
 
 - title: Apogee 2016
-  url: http://bits-apogee.org
+  url: http://bits-apogee.org/2016/
   image: ../images/apogee.png
+  completed: true
+
+- title: Oasis 2015
+  url: https://www.behance.net/gallery/31060195/Oasis-2015-Main-Websit
+  image: ../images/oasis.jpg
   completed: true
 
 - title: Oasis 2015 beta

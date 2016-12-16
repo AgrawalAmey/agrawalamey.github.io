@@ -2,6 +2,6 @@
 layout: home
 ---
 
-# About
+# Amey Agrawal
 
-Lorem ipsum dolor sit amet, ei dico idque iudicabit quo, ei graeco voluptaria cum. Porro apeirian rationibus no eam. Cum ex latine atomorum. Mei maiorum fastidii repudiandae ad. Graece aperiri phaedrum usu an, adhuc dolorum pertinax pri ex.
+I am a junior year computer science undergrad at BITS Pilani. Currently, on a quest to perceive the wizardry of deep learning. 
