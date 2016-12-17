@@ -45,7 +45,7 @@ layout: compress
           <span class="projects-link">PROJECTS</span>
         </li>
         <li>
-          <a href="/docs/cv.pdf" title="resume">
+          <a href="/docs/cv.pdf" title="resume" target="_blank">
             <i class="fa fa-file-text resume-icon" aria-hidden="true"></i>
           </a>
           <span class="resume-link">RESUME</span> 
@@ -55,11 +55,11 @@ layout: compress
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}
         <br>
-        {% include disqus.html %}
-        {% include page-pagination.html %}
         <div class="share-buttons">
           {% include share.html %}
         </div>
+        {% include disqus.html %}
+        {% include page-pagination.html %}
       </div>
     </div>
     {% include scripts.html %}

@@ -1,3 +1,13 @@
+- title: automated-inshorts
+  url: https://github.com/AgrawalAmey/automated-inshorts
+  image: ../images/inshorts.png
+  completed: true
+
+- title: LSTM image captioning
+  url: https://github.com/AgrawalAmey/image_captioning
+  image: ../images/image_cap.jpg
+  completed: true
+
 - title: sitemap-draw
   url: https://github.com/AgrawalAmey/sitemap-draw
   image: ../images/sitemap-draw.png
@@ -5,7 +15,7 @@
 
 - title: Lacuna 2016
   url: http://bits-apogee.org/2016/lacuna/
-  image: ../images/apogee.png
+  image: ../images/lacuna.png
   completed: true
 
 - title: Apogee 2016
