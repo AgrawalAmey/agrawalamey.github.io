@@ -10,7 +10,7 @@ tags:
   - Tips
 ---
 
-College fests are irreplaceable delights of an engineering college student's life. Each college tries to make it's fests bigger yet different than others and so is case with fest websites. These fest websites stand as expression of creativity of it's makers which more often than not this leads to large page load time and poor user experience. While working on websites for <a target='_blank' href="http://bits-oasis.org/2015main/"> Oasis </a> and <a target='_blank' href="http://bits-apogee.org/2016/"> Apogee </a> at Department of Visual Media following are few techniques we explored to make our websites faster. Both graphics designers and front-end developers might find the blog helpful.
+College fests are irreplaceable delights of a college student's life. Each college tries to make it's fests bigger yet different than others and so is case with fest websites. These fest websites stand as expression of creativity of it's makers which more often than not this leads to large page load time and poor user experience. While working on websites for <a target='_blank' href="http://bits-oasis.org/2015main/"> Oasis </a> and <a target='_blank' href="http://bits-apogee.org/2016/"> Apogee </a> at Department of Visual Media following are few techniques we explored to make our websites faster. Both graphics designers and front-end developers might find the blog helpful.
 
 ### 1. Choose the right file format
 This is the most basic yet the most effective step of all. With improved browser rendering engines SVG files have gained popularity in the web design domain, being vectors they scale up with screen sizes without any depreciation in quality and they are lightweight as a bonus they support animations and JavaScript interactions.
@@ -60,4 +60,4 @@ HTTP/2 would completely change this landscape though, you can read more about it
 ### 7. Enable caching
 Caching the less frequently changed files makes pages load super-fast for returning users. <a target='_blank' href="https://betterexplained.com/articles/how-to-optimize-your-site-with-http-caching/"> [7]</a> walks through enabling caching in apache, for nginx you might want to refer <a target='_blank' href="https://www.nginx.com/blog/nginx-caching-guide/"> [8]</a>.
 
-I hope that this posts helps in making you sites faster. If you have any suggestions please write them down in the comments bellow. Thank you!
+I hope that this posts helps in making you sites faster. If you have any suggestions please write them down in the comments below. Thank you!
