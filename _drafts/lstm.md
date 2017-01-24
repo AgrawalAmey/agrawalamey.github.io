@@ -26,8 +26,19 @@ Typical recurrent neural networks unfold into a repeated multiplication of hidde
  <figure class="half">
      <img src="/images/posts/lstm/lstm_gate.png" />
      <img src="/images/posts/lstm/forward.png" />
-      <figsource>Figure by: <a target="_blank" href="https://arxiv.org/abs/1412.3555">Chung et al.</a></figsource>
+      <figsource>Figure inspired by: <a target="_blank" href="https://arxiv.org/abs/1412.3555">Chung et al.</a></figsource>
      <figcaption>Caption describing these two images.</figcaption>
  </figure>
 
-The equation can be 
+The computations LSTMs can be seen as a two step process. Where in the first step we calculate the gate values, while in the second stage we compute cell state (c) and output (h).
+
+<figure>
+    <img src="/images/posts/lstm/ifog.png" />
+     <figsource>Figure by: <a target="_blank" href="http://nikhilweee.me">Nikhil Verma</a></figsource>
+    <figcaption>Phase I: Computing gate values</figcaption>
+</figure>
+
+<figure>
+    <img src="/images/posts/lstm/0.jpg" />
+    <figcaption>Phase II: Computing c & h</figcaption>
+</figure>
