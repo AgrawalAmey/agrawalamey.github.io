@@ -146,6 +146,12 @@ figure {
     width: 100%;
     text-align: center;
   }
+  figsource {
+    margin-bottom: 0.5em;
+    color: lighten($black, 50%);
+    font-size: 0.85em;
+    width: 100%;
+  }
   img {
     margin-bottom: 10px;
   }
