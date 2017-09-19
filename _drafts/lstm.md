@@ -1,14 +1,14 @@
 ---
-layout: post
-title: "Backprop in LSTMs"
-excerpt: "Understanding gradient flow in LSTMs."
-image: "images/apogee.png"
+title: Backprop in LSTMs
+date: 2017-09-19 11:51:25.221000000 Z
 tags:
-  - Deep Learning
-  - NLP
-  - LSTM
+- Deep Learning
+- NLP
+- LSTM
+layout: post
+excerpt: Understanding gradient flow in LSTMs.
+image: images/apogee.png
 ---
-
 
 Inspired by Andrej Karpathy's <a target="_blank" href="http://cs231n.stanford.edu">CS231n: Convolutional Neural Networks for Visual Recognition</a>, last semester me and my friends decided to try image captioning using LSTMs as our "Neural Networks and Fuzzy logic" course project. The most fun and challenging part was to calculate gradients for the backward pass. This post comes as my attempt with <a target="_blank" href="https://www.youtube.com/watch?v=tkm0TNFzIeg">Fynman's learning technique</a>.
 
