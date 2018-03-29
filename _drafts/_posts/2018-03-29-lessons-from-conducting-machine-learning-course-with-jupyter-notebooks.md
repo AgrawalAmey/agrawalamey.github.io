@@ -1,6 +1,6 @@
 ---
 title: Lessons From Conducting Machine Learning Course With Jupyter Notebooks
-date: 2018-03-29 19:31:10 Z
+date: 2018-03-29 19:31:10 +0000
 layour: post
 excerpt: The problems and solutions for conducting a machine learning course in Jupyter
   Notebooks.
@@ -11,7 +11,6 @@ tags:
 image: "/uploads/2018/03/29/Screenshot from 2018-03-30 13-03-31.png"
 layout: post
 ---
-
 ### Prologue
 
 In recent years the popularity of machine learning and related courses has skyrocketed in BITS Pilani. Though during my junior seven courses related to machine learning and data science were offered and each containing a term project none of these courses taught programming nuances required to implement these projects. I solved assignments from Stanford's [CS 231n](cs231n.stanford.edu) and [CS 224d](http://cs224d.stanford.edu/) in my free time to learn NumPy and TensorFlow, however  with six courses and three term project it easily becomes a strenuous task. Hence, [Nikhil Verma](nikhilweee.github.io) and I approached out project adviser Prof. Bhanot with some ideas to introduce some Python based learning components in her course on Neural Networks and Fuzzy Logic. Over the summers we charted the plan for the course and decided to have three assignments each followed by a programming test. As a team of five senior year teaching assistants during we introduced the updated course for the first time during fall 2017.
@@ -48,10 +47,14 @@ Due to the increased popularity of the course it was decided to run the course d
 
 The YouTube video above provides tour to all the features for students. The source code for the app and server is available [here](https://github.com/AgrawalAmey/nnfl-app) on GitHub. Apart from the app we are also running a [Jekyll](https://jekyllrb.com/) site for listing of suggested projects [here](). We used old school google forms with [choice eliminator 2 ](https://chrome.google.com/webstore/detail/choice-eliminator-2/mnhoinjhhhafgieggnhjekliaodnkigj?utm_source=permalink) to allot the project topics on a first come first serve basis.
 
-### Some intresting ideas
+### Some interesting ideas
 
 Though the app performed functionally well during the two lab tests we conducted so far there are quite a few rough edges which need to be fixed. But following are some of the more interesting ideas we think the app could possibly be developed further into.
 
 **Remote Storage of Notebooks:** Currently the notebooks are stored locally and any changes students make in their assignment notebooks do not reflect when logged in from another machine. Syncing the files to the remote server could fix this problem.
 
-**Consensus Protocols For Real-Time Grading:** One of the biggest downsides of our current setup is that students cannot check if their submission passed the hidden test cases and receive the score only after we manually run `nbgrader` on their submissions. One possible way to overcome the limitation put forward by the 
+**Consensus Protocols For Real-Time Grading:** One of the biggest downsides of our current setup is that students cannot check if their submission passed the hidden test cases and receive the score only after we manually run `nbgrader` on their submissions. One possible way to overcome the limitation put forward by the limitation of server-side computer resources could be to use all the client systems with consensus protocol.
+
+### Future of The Project
+
+I would graduate from BITS next month and would be focusing more on my research projects here on. 
