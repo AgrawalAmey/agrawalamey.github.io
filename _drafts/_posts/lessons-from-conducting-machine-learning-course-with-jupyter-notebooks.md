@@ -1,7 +1,7 @@
 ---
 title: Lessons From Conducting Machine Learning Course With Jupyter Notebooks
+date: 2018-03-29 19:31:10 Z
 layour: post
-date: 2018-03-29 19:31:10 +0000
 excerpt: The problems and solutions for conducting a machine learning course in Jupyter
   Notebooks.
 tags:
