@@ -22,9 +22,9 @@ Jupyter notebooks were the obvious choice for creating assignments. But the stud
 
 **Assignment Distribution:**  We used [Azure Notebooks](https://notebooks.azure.com/nnfl/libraries) to distribute assignments and tutorials for the course. Students could directly clone the assignment libraries and launch the notebooks.
 
-**Evaluating Submissions:** An awesome open source project `[nbgrader](http://nbgrader.readthedocs.io/en/stable/)` turned out to be super helpful creating and evaluating assignments in Jupyter notebooks.
+**Evaluating Submissions:** An awesome open source project [nbgrader](http://nbgrader.readthedocs.io/en/stable/) turned out to be super helpful creating and evaluating assignments in Jupyter notebooks.
 
-**Test Portal:** We needed a way to collect the submissions during the lab tests. `nbgrader` integrates with JupyterLab but we could not cater to 150 users on the spare machine we had borrowed from one the general computer science labs to host the service. None of the competitive coding platforms provided on option to host Jupyter notebooks up to our knowledge. So we decided to write a simple [Express]() web app which allowed students to upload the solutions as zips. We installed [Anaconda 3.6](https://anaconda.org/) along with `[nbopen](https://github.com/takluyver/nbopen)` on each of the lab systems.
+**Test Portal:** We needed a way to collect the submissions during the lab tests. `nbgrader` integrates with JupyterLab but we could not cater to 150 users on the spare machine we had borrowed from one the general computer science labs to host the service. None of the competitive coding platforms provided on option to host Jupyter notebooks up to our knowledge. So we decided to write a simple [Express]() web app which allowed students to upload the solutions as zips. We installed [Anaconda 3.6](https://anaconda.org/) along with [nbopen](https://github.com/takluyver/nbopen) on each of the lab systems.
 
 ### The issues
 
@@ -32,7 +32,7 @@ Though Azure notebooks were handy they were slow, combined with the slow interne
 
 ### Building the electron app
 
-Due to the increased popularity of the course, it was decided to run the course during both the semester. I along with [Shrikant Sharda](https://github.com/shrikantsharda) decided to fix the issues we had faced in the previous offering of the course. We need to eliminate the need to hit the internet altogether and make all the resources available on the intranet. We decided to build an [electron](electron.atom.io) app which would be bundled with Anaconda. We decided to keep most of the back-end components intact form our original express server which used `[ejs](https://www.npmjs.com/package/ejs)` templates. Following are some of the neat features this app facilitated,
+Due to the increased popularity of the course, it was decided to run the course during both the semester. I along with [Shrikant Sharda](https://github.com/shrikantsharda) decided to fix the issues we had faced in the previous offering of the course. We need to eliminate the need to hit the internet altogether and make all the resources available on the intranet. We decided to build an [electron](electron.atom.io) app which would be bundled with Anaconda. We decided to keep most of the back-end components intact form our original express server which used [ejs](https://www.npmjs.com/package/ejs) templates. Following are some of the neat features this app facilitated,
 
 **Cross-Platform Zero-Setup Jupyter Notebooks:**  We bundled Anaconda 3.6 and archives for some deep learning libraries along with the app. With some hacks (read installing anaconda on Windows via command line) we were able to ensure that regardless of which platform you are on, opening the app for the first time installs an isolated Anaconda environment with all the necessary libraries with zero efforts.
 
