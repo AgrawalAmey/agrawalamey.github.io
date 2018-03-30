@@ -45,7 +45,8 @@ Due to the increased popularity of the course, it was decided to run the course 
 **Improved Performance On Web Server:** We still render most views displayed within the app on our back-end web server which enables us to push front-end updates without requiring a user-side update of the app. However, all the static resources are already bundled on the client app which dramatically improved the performance of our server; especially during the first few minutes of the test, when all the users would typically download the archives of Python documentation in the old workflow.
 
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/fiKaIJcfsAs" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fiKaIJcfsAs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 [![Tour Video](https://j.gifs.com/l5EDy7.gif)](https://www.youtube.com/watch?v=fiKaIJcfsAs&feature=youtu.be)
 
 The YouTube video above provides a tour of all the features for students. The source code for the app and server is available [here](https://github.com/AgrawalAmey/nnfl-app) on GitHub. Apart from the app, we are also running a [Jekyll](https://jekyllrb.com/) site for the listing of suggested term-project topics [here](https://nnfl.github.io). We used old-school google forms with [choice eliminator 2 ](https://chrome.google.com/webstore/detail/choice-eliminator-2/mnhoinjhhhafgieggnhjekliaodnkigj?utm_source=permalink) to allocate the project topics on a first come first serve basis.
