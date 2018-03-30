@@ -1,9 +1,29 @@
+- title: NNFl App
+  url: https://github.com/AgrawalAmey/nnfl-app
+  image: ../images/nnfl-app.png
+  completed: true
+
+- title: Deep Q-Learning with V-Rep for Warehouse Robots
+  url: https://github.com/AgrawalAmey/rl-car
+  image: ../images/rl-bot.png
+  completed: true
+
+- title: CNN Visualization Toolkit
+  url: https://github.com/AgrawalAmey/conv-viz
+  image: ../images/cnn-viz.png
+  completed: true
+
+- title: Pokemon MMORPG in C
+  url: https://github.com/AgrawalAmey/pnp
+  image: ../images/pnp.png
+  completed: true
+
 - title: automated-inshorts
   url: https://github.com/AgrawalAmey/automated-inshorts
   image: ../images/inshorts.png
   completed: true
 
-- title: LSTM image captioning
+- title: LSTMs for image captioning
   url: https://github.com/AgrawalAmey/image_captioning
   image: ../images/image_cap.jpg
   completed: true
