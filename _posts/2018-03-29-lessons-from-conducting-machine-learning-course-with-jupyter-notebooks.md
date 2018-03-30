@@ -1,5 +1,5 @@
 ---
-title: Conducting Machine Learning Course With Jupyter Notebooks
+title: Jupyter In Classroom
 date: 2018-03-29 19:31:10 Z
 tags:
 - Deep Learning
@@ -14,7 +14,7 @@ layout: post
 
 ### Prologue
 
-In recent years the popularity of machine learning and related courses has skyrocketed in BITS Pilani. Though during my junior year seven courses related to machine learning and data science were offered and each containing a term project none of these courses taught programming nuances required to implement these projects. I solved assignments from Stanford's [CS 231n](cs231n.stanford.edu) and [CS 224d](http://cs224d.stanford.edu/) in my free time to learn NumPy and TensorFlow however  with six courses and three term project it easily becomes a strenuous task. Hence, [Nikhil Verma](nikhilweee.github.io) and I approached our project adviser Prof. Bhanot with some ideas to introduce Python-based learning components in her course on Neural Networks and Fuzzy Logic. Over the summers we charted the plan for the course and decided to have three assignments each followed by a programming test. As a team of five senior year teaching assistants during we introduced the updated course during fall 2017.
+In recent years the popularity of machine learning and related courses has skyrocketed in BITS Pilani. Though during my junior year seven courses related to machine learning and data science were offered and each containing a term project none of these courses taught programming nuances required to implement these projects. I solved assignments from Stanford's [CS 231n](http://cs231n.stanford.edu) and [CS 224d](http://cs224d.stanford.edu/) in my free time to learn NumPy and TensorFlow however  with six courses and three term project it easily becomes a strenuous task. Hence, [Nikhil Verma](https://nikhilweee.github.io) and I approached our project adviser Prof. Bhanot with some ideas to introduce Python-based learning components in her course on Neural Networks and Fuzzy Logic. Over the summers we charted the plan for the course and decided to have three assignments each followed by a programming test. As a team of five senior year teaching assistants during we introduced the updated course during fall 2017.
 
 ### Original Setup
 
@@ -32,7 +32,7 @@ Though Azure notebooks were handy, they were slow, combined with the slow intern
 
 ### Building the electron app
 
-Due to the increased popularity of the course, it was decided to run the course during both the semester. I along with [Shrikant Sharda](https://github.com/shrikantsharda) decided to fix the issues we had faced in the previous offering of the course. We need to eliminate the need to hit the internet altogether and make all the resources available on the intranet. We decided to build an [electron](electron.atom.io) app which would be bundled with Anaconda. We decided to keep most of the back-end components intact form our original express server which used [ejs](https://www.npmjs.com/package/ejs) templates. Following are some of the neat features this app facilitated,
+Due to the increased popularity of the course, it was decided to run the course during both the semester. I along with [Shrikant Sharda](https://github.com/shrikantsharda) decided to fix the issues we had faced in the previous offering of the course. We need to eliminate the need to hit the internet altogether and make all the resources available on the intranet. We decided to build an [electron](http://electron.atom.io) app which would be bundled with Anaconda. We decided to keep most of the back-end components intact form our original express server which used [ejs](https://www.npmjs.com/package/ejs) templates. Following are some of the neat features this app facilitated,
 
 **Cross-Platform Zero-Setup Jupyter Notebooks:**  We bundled Anaconda 3.6 and archives for some deep learning libraries along with the app. With some hacks (read installing anaconda on Windows via command line) we were able to ensure that regardless of which platform you are on, opening the app for the first time automatically installs an isolated Anaconda environment with all the necessary libraries with zero efforts.
 
