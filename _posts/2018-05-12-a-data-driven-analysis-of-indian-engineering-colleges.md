@@ -1,12 +1,12 @@
 ---
 title: 'A Data Driven Analysis of Indian Engineering Colleges '
 date: 2018-05-12 18:30:00 Z
-layout: post
-excerpt: We do we rank so low?
 tags:
 - Data Analysis
 - Research In India
 - BITS Pilani
+layout: post
+excerpt: We do we rank so low?
 image: images/posts/nirf/side.jpeg
 ---
 
