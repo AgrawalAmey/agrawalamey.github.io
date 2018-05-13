@@ -8,7 +8,7 @@ tags:
 - Tips
 layout: post
 excerpt: Tips and tricks to make websites load faster.
-image: images/apogee.png
+image: images/projects/apogee.png
 crosspost_to_medium: true
 ---
 

@@ -8,7 +8,7 @@ tags:
 layour: post
 excerpt: The problems and solutions for conducting a machine learning course in Jupyter
   Notebooks.
-image: images/nnfl-app.png
+image: images/projects/nnfl-app.png
 layout: post
 ---
 
