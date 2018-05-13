@@ -16,16 +16,16 @@ During the recent protests against the fee hike at BITS Pilani certain students 
 
 NIRF defines Research and Professional Practice (RP) score which reflects the publications and patents published along with sponsored research and consultancy projects undertaken in past three years. RP is a combination of four individual matrices defined as,
 
-\$$ RP = PU + QP + IPR + FPPP $$
+$$ RP = PU + QP + IPR + FPPP $$
 
 ### Combined metric for Publications (PU)
 
-\$$ PU = 35 × f(P/F_{RQ}) $$
+$$ PU = 35 × f(P/F_{RQ}) $$
 
-Here, $P$ is the total number of publications and $F_{RQ}$ is the nominal number of faculty members. $f$ is some function whose value lies between $\[0, 1\]$, however the exact definition is missing. 
+Here, $P$ is the total number of publications and $F_{RQ}$ is the nominal number of faculty members. $f$ is some function whose value lies between $[0, 1]$, however the exact definition is missing.
 
 ### Combined metric for Quality of Publications (QP)
 
-\$$ QP = 20 × f (CC/P) + 20× f (\\text{TOP25P}/P) $$
+$$ QP = 20 × f (CC/P) + 20× f (\text{TOP25P}/P) $$
 
-Here, CC is Total Citation Count over previous three years and $\\text{TOP25P}$ is the number of citations in top 25 percentile averaged over the previous three years.
+Here, CC is Total Citation Count over previous three years and $\text{TOP25P}$ is the number of citations in top 25 percentile averaged over the previous three years.
