@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 _site
 .sass-cache
+=======
+src/rankings/*
+src/rankings_int/*
+>>>>>>> a24126dae3d2bf631fb27fcae89e9addbe0f4fd7
