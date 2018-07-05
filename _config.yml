@@ -31,10 +31,11 @@ sass:
   style: compressed
 google-analytics: UA-90377219-1
 email: agrawalamey12@gmail.com
-facebook: agrawalamey12
+# facebook: agrawalamey12
 github: AgrawalAmey
 linkedin: agrawalamey
-behance: agrawalamey
+twitter: agrawalamey12
+# behance: agrawalamey
 gems:
 - jekyll-feed
 - jekyll-sitemap

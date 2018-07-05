@@ -1,6 +1,6 @@
 <div class="overlay">
   <a onclick="toggleProjects()" class="close-button">
-    <i class="fa fa-times-circle" aria-hidden="true"></i>
+    <i class="fas fa-times" aria-hidden="true"></i>
   </a>
   <ul class="projects-menu">
     {% for item in site.data.projects %}
@@ -8,16 +8,60 @@
       {% unless image contains 'http://' or image contains 'https://' %}
       {% capture image %}/{{ image }}{% endcapture %}
       {% endunless %}
-      <li style="background:url({{ image }}) center center no-repeat;">
-        <a href="{{ item.url }}" {% unless item.completed %}class="inactive"{% endunless %} target="_blank" rel="nofollow external">
-          <span>
-            {{ item.title }}
-            {% unless item.completed %}
-            <br><em>in progress</em>
-            {% endunless %}
-          </span>
+      <li class="projects-menu-list" style="background:url({{ image }}) center center no-repeat;">
+        <a href="" target="_blank" rel="nofollow external">
         </a>
-        </li>
+        <div class="project-info">
+          <p>{{item.title}}</p>
+          <div style="margin: 0 auto; display: table">
+            <ul class="social-button-list">
+              {% if item.blog %}
+              <li>
+                <a class="social-btn" href="{{ item.blog }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-quote-left"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.link %}
+              <li>
+                <a class="social-btn" href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-link"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.youtube %}
+              <li>
+                <a class="social-btn" href="{{ item.youtube }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.github %}
+              <li>
+                <a class="social-btn" href="{{ item.github }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.behance %}
+              <li>
+                <a class="social-btn" href="{{ item.behance }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-behance"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.paper %}
+              <li>
+                <a class="social-btn" href="{{ item.paper }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-file-alt"></i>
+                </a>
+              </li>
+              {% endif %} {% if item.hackernews %}
+              <li>
+                <a class="social-btn" href="{{ item.hackernews }}" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-hacker-news"></i>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </li>
     {% endfor %}
   </ul>
 </div>

@@ -1,59 +1,49 @@
-- title: NNFl App
-  url: https://github.com/AgrawalAmey/nnfl-app
+- title: NNFL App
   image: ../images/projects/nnfl-app.png
-  completed: true
+  github: https://github.com/AgrawalAmey/nnfl-app
+  blog: https://agrawalamey.github.io/lessons-from-conducting-machine-learning-course-with-jupyter-notebooks/
+  youtube: https://www.youtube.com/watch?v=fiKaIJcfsAs&feature=youtu.be
 
 - title: Deep Q-Learning with V-Rep for Warehouse Robots
-  url: https://github.com/AgrawalAmey/rl-car
   image: ../images/projects/rl-bot.png
-  completed: true
+  github: https://github.com/AgrawalAmey/rl-car
 
 - title: CNN Visualization Toolkit
-  url: https://github.com/AgrawalAmey/conv-viz
   image: ../images/projects/cnn-viz.png
-  completed: true
+  github: https://github.com/AgrawalAmey/conv-viz
 
 - title: Pokemon MMORPG in C
-  url: https://github.com/AgrawalAmey/pnp
   image: ../images/projects/pnp.png
-  completed: true
+  github: https://github.com/AgrawalAmey/pnp
 
 - title: automated-inshorts
-  url: https://github.com/AgrawalAmey/automated-inshorts
   image: ../images/projects/inshorts.png
-  completed: true
+  github: https://github.com/AgrawalAmey/automated-inshorts
 
 - title: LSTMs for image captioning
-  url: https://github.com/AgrawalAmey/image_captioning
   image: ../images/projects/image_cap.jpg
-  completed: true
+  github: https://github.com/AgrawalAmey/image_captioning
 
 - title: sitemap-draw
-  url: https://github.com/AgrawalAmey/sitemap-draw
   image: ../images/projects/sitemap-draw.png
-  completed: true
+  github: https://github.com/AgrawalAmey/sitemap-draw
 
 - title: Lacuna 2016
-  url: http://bits-apogee.org/2016/lacuna/
   image: ../images/projects/lacuna.png
-  completed: true
+  github: https://github.com/PrateekGupta1509/Lacuna-2k16
 
 - title: Apogee 2016
-  url: http://bits-apogee.org/2016/
   image: ../images/projects/apogee.png
-  completed: true
+  link: https://bits-apogee.org/2016/
+  github: https://github.com/PrateekGupta1509/apogee_main
 
 - title: Oasis 2015
-  url: https://www.behance.net/gallery/31060195/Oasis-2015-Main-Websit
   image: ../images/projects/oasis.jpg
-  completed: true
+  link: https://bits-oasis.org/2015main/
+  youtube: https://www.youtube.com/watch?v=apZFH1nrqJ8&feature=share
+  behance: https://www.behance.net/gallery/31060195/Oasis-2015-Main-Website
 
 - title: Oasis 2015 beta
-  url: https://www.behance.net/gallery/31060417/Oasis-2015-Beta-Site
   image: ../images/projects/oasis_beta.jpg
-  completed: true
-
-- title: vectorTech
-  url: https://agrawalamey.github.io/vector-tech-website
-  image: ../images/projects/vt.png
-  completed: true
+  link: https://bits-oasis.org/2015intro/
+  behance: https://www.behance.net/gallery/31060417/Oasis-2015-Beta-Site
