@@ -4,4 +4,4 @@ layout: home
 
 # Amey Agrawal
 
-I am a senior year computer science undergrad. Currently, on a quest to perceive the wizardry of deep learning. 
+Currently, working as a member of technical staff at [Qubole](https://qubole.com). I like all things maths, presently charmed by reinforcement learning.
