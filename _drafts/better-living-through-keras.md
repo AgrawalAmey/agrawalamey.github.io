@@ -24,7 +24,7 @@ Following are the reasons I had stopped using Keras:
 While most of the above mentioned issues could be resolved by strange
 Keras-TensorFlow spaghetti it seemed easier to write the complete code
 in TensorFlow. But recently while working on a computer vision project
-I decided to give a shot to Keras again. It turned out to be the most
+I decided to give a shot to Keras again. It turned out to be a
 delightful experience.
 
-The improved  
+The improved Keras integration and improved API 
