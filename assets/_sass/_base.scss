@@ -142,14 +142,15 @@ figure {
   figcaption {
     margin-bottom: 0.5em;
     color: lighten($black, 50%);
-    font-size: 0.85em;
+    font-size: 1em;
     width: 100%;
     text-align: center;
   }
   figsource {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     color: lighten($black, 50%);
-    font-size: 0.85em;
+    font-size: 0.7em;
+    text-align: center;
     width: 100%;
   }
   img {
