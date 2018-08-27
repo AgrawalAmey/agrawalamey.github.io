@@ -61,20 +61,21 @@ def translate_data(X, number_of_samples=5):
     :param X: (n, 28, 28) array containing original MNIST images
     :param number_of_samples: Number of samples to be generated from
                               each input image.
-    :return new_x: (n * number_of_samples, 28, 28) array containing
+    :return: tuple of ((new_x, translation_vectors), new_y)
+            new_x: (n * number_of_samples, 28, 28) array containing
                          images from the original datset.
-    :return new_y: (n * number_of_samples, 28, 28) array containing
+            translation_vectors: (14,) one-hot array containing the amount
+                                of translation applied to each corresponding
+                                image in new_y
+            new_y: (n * number_of_samples, 28, 28) array containing
                          translated images.
-    :return translation_vectors: (14,) one-hot array containing the amount
-                                 of translation applied to each corresponding
-                                 image in new_y
     """
     new_x = []
     new_y = []
     translation_vectors = []
 
     for i in range(X.shape[0]):
-        for _ in range(5):
+        for _ in range(number_of_samples):
             translation = np.random.randint(0, 14) * 2
             # Copy image to new_x as it is
             new_x.append(X[i])
@@ -86,13 +87,17 @@ def translate_data(X, number_of_samples=5):
             translation_vector[translation // 2] = 1
             translation_vectors.append(translation_vector)
 
-    return new_x, new_y, translation_vectors
+    new_x, translation_vectors, new_y = np.asarray(new_x), \
+                                        np.asarray(translation_vectors), \
+                                        np.asarray(new_y)
+
+    return ((new_x, translation_vectors), new_y)
 ```
 
 We then define the encoder network as a simple CNN,
 
 ```py
-def get_encoded(input_img)
+def get_encoded(input_img):
     """
     Defines the encoder network.
     :param input_image: A tensor containing input image
@@ -116,11 +121,11 @@ Since defining the decoder all at once could be a mouthful we create a helper me
 which returns us the convolution and addition block.
 
 ```py
-def convolve_and_add(x, shape_input_reshaped, image_dim, num_filters=14):
+def convolve_and_add(x, translation_vector_reshaped, image_dim, num_filters=14):
     """
     Defines the convolution and add block.
     :param x: Input tensor
-    :param shape_input_reshaped: Shape input reshaped as (1, 1, 14) tensor
+    :param translation_vector_reshaped: Shape input reshaped as (1, 1, 14) tensor
     :param image_dim: The dimension of input tensor, assuming the
                       image hight and width are same
     :param num_filters: Number of filters in each convolution layer
@@ -130,14 +135,14 @@ def convolve_and_add(x, shape_input_reshaped, image_dim, num_filters=14):
     get_tiling_lambda = lambda: Lambda(lambda x: K.tile(x, [1, image_dim, image_dim, 1]))
     
     x = Conv2D(num_filters, (3, 3), activation='relu', padding='same')(x)
-    shape_vec = get_tiling_lambda()(shape_input_reshaped)
-    x = Add()([x, shape_vec])
+    translation_vector_tiled = get_tiling_lambda()(translation_vector_reshaped)
+    x = Add()([x, translation_vector_tiled])
     x = Conv2D(num_filters, (3, 3), activation='relu', padding='same')(x)
-    shape_vec = get_tiling_lambda(shape_input_reshaped)
-    x = Add()([x, shape_vec])
+    translation_vector_tiled = get_tiling_lambda()(translation_vector_reshaped)
+    x = Add()([x, translation_vector_tiled])
     x = Conv2D(num_filters, (3, 3), activation='relu', padding='same')(x)
-    shape_vec = get_tiling_lambda(shape_input_reshaped)
-    x = Add()([x, shape_vec])
+    translation_vector_tiled = get_tiling_lambda()(translation_vector_reshaped)
+    x = Add()([x, translation_vector_tiled])
     x = BatchNormalization()(x)
 
     return x
@@ -146,14 +151,14 @@ def convolve_and_add(x, shape_input_reshaped, image_dim, num_filters=14):
 Then we define decoder network using `convolve_and_add` as,
 
 ```py
-def get_decoded(encoded, shape_input):
+def get_decoded(encoded, translation_vector):
     """
     Defines the decoder network.
     :param encoded: Tensor representing the encoded image
-    :param shape_input: One-hot vector representing the translation amount
+    :param translation_vector: One-hot vector representing the translation amount
     :return: Decoded image
     """
-    shape_input_reshaped = Reshape((1, 1, 14))(shape_input)
+    translation_vector_reshaped = Reshape((1, 1, 14))(translation_vector)
 
     #### Block 1 ####
     # Convolution
@@ -167,23 +172,23 @@ def get_decoded(encoded, shape_input):
 
     #### Block 2 ####
     # Convolve and Add
-    x = convolve_and_add(x, shape_input_reshaped, 4)
+    x = convolve_and_add(x, translation_vector_reshaped, 4)
     # Upsample
     x = Conv2D(14, (3, 3), activation='relu', padding='same')(x)
     x = UpSampling2D((2, 2))(x)
 
     #### Block 3 ####
     # Convolve and Add
-    x = convolve_and_add(x, shape_input_reshaped, 8)
+    x = convolve_and_add(x, translation_vector_reshaped, 8)
     # Upsample
     x = Conv2D(14, (3, 3), activation='relu', padding='same')(x)
     x = UpSampling2D((2, 2))(x)
 
     #### Block 4 ####
     # Convolve and Add
-    x = convolve_and_add(x, shape_input_reshaped, 16)
+    x = convolve_and_add(x, translation_vector_reshaped, 16)
     # Upsample
-    x = Conv2D(32, (3, 3), activation='relu', padding='same')(x)
+    x = Conv2D(32, (3, 3), activation='relu')(x)
     x = UpSampling2D((2, 2))(x)
 
     #### Block 5 ####
