@@ -307,7 +307,21 @@ canvas {
 
 .about-info {
   max-width: 650px;
-  margin-top: -170px;
+  margin-top: -2%;
+  a {
+    color: #399f62;
+    border-bottom: 1px dotted $green;
+  }
+
+  li {
+    p {
+      padding-top: 0 !important;
+    }
+  }
+
+  ul {
+    padding-left: 20px;
+  }
 }
 
 .main-info {
@@ -324,6 +338,7 @@ canvas {
     font-size: 30px;
     position: relative;
     margin-top: 0;
+    margin-bottom: 35px;
     &:after {
       content: "";
       width: 100px;
@@ -339,11 +354,13 @@ canvas {
       transform: translatex(-50%);
     }
   }
+  h2 {
+    font-size: 25px;
+  }
   p {
     font-size: 21px;
     line-height: 30px;
     margin: 10px 0;
-    padding-top: 25px;
   }
 }
 
@@ -431,7 +448,7 @@ canvas {
   text-align: left;
   h1,
   h2 {
-    font-size: 35px;
+    font-size: 30px;
     color: lighten($black, 27.8431);
     &:after {
       position: absolute;
@@ -447,15 +464,16 @@ canvas {
       width: 200px;
     }
   }
+  h2 {
+    font-size: 25px;
+    margin-top: 20px !important;
+  }
   p {
     color: $black;
     font-size: 16px;
     margin: 10px 0;
     padding-top: 0;
     line-height: 24px;
-    &:first-of-type {
-      padding-top: 35px;
-    }
   }
 }
 
@@ -749,8 +767,19 @@ canvas {
   }
 
   .about-info {
-    margin-top: 0;
+    margin-top: 22%;
     padding: 5px;
+
+    a {
+      color: #399f62;
+      border-bottom: 1px dotted $green;
+    }
+
+    li {
+      p {
+        padding-top: 0;
+      }
+    }
   }
 }
 
