@@ -4,7 +4,7 @@ layout: home
 
 # Amey Agrawal
 
- I am a member of technical staff at [Qubole](https://qubole.com). I completed my bachelor's degree in Computer Science from [Birla Institute of Technology & Science](https://www.bits-pilani.ac.in/) in 2018. My research includes machine learning for systems, natural language processing and reinforcement learning. *I am looking for machine learning engineering roles.*
+ I am a member of technical staff at [Qubole](https://qubole.com). I completed my bachelor's degree in Computer Science from [Birla Institute of Technology & Science](https://www.bits-pilani.ac.in/) in 2018. My research includes machine learning for systems, natural language processing and reinforcement learning. *I am looking for machine learning engineer roles.*
 
 ## Research
 
