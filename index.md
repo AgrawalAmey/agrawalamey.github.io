@@ -4,7 +4,7 @@ layout: home
 
 # Amey Agrawal
 
- I am a member of technical staff at [Qubole](https://qubole.com). I completed my bachelor's degree in Computer Science from [Birla Institute of Technology & Science](https://www.bits-pilani.ac.in/) in 2018. My research includes machine learning for systems, natural language processing and reinforcement learning. *I am looking for ML engineering roles.*
+ I am an engineer with the systems group at Microsoft Research, India. I am currently working on low-level systems for Azure's machine learning platform. Before, that I spent a couple of years working on Apache Spark and IR problems at a big data platform start-up. I am interested in ML for systems and systems for ML. *I am applying for PhD programmes this Fall.*
 
 ## Research
 
