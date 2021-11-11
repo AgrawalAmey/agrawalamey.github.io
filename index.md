@@ -4,7 +4,7 @@ layout: home
 
 # Amey Agrawal
 
- I am an engineer with the systems group at Microsoft Research, India. I am currently working on low-level systems for Azure's machine learning platform. Before, that I spent a couple of years working on Apache Spark and IR problems at a big data platform start-up. I am interested in ML for systems and systems for ML. *I am applying for PhD programmes this Fall.*
+I am an engineer with the systems group at Microsoft Research, India. I am currently working on low-level systems for Azure’s machine learning platform. Before, that I spent a couple of years working on Apache Spark and IR problems at a big data platform start-up. I am interested in ML for systems and systems for ML. I am applying for Ph.D. programs this Fall.
 
 ## Research
 
