@@ -15,7 +15,8 @@ I am an engineer with the systems group at [Microsoft Research India](https://ww
   <p class="project-line-item-description" markdown='1'>
     **Learning Digital Circuits: A Journey Through Weight Invariant Self-Pruning Neural Networks** <br>
       Amey Agrawal, and Rohit Karlupiya <br>
-      *Proceedings of New in ML Workshop, NeurIPS, 2019, Vancouver* [\[pdf\]](https://arxiv.org/abs/1909.00052) [\[code\]](https://github.com/AgrawalAmey/binary-nets)
+      *Proceedings of New in ML Workshop, NeurIPS, 2019, Vancouver*
+      *Proceedings of Sparsity in Neural Networks Workshop, 2021, Virtual* [\[pdf\]](https://arxiv.org/abs/1909.00052) [\[code\]](https://github.com/AgrawalAmey/binary-nets)
   </p>
 </div>
 
