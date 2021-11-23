@@ -9,7 +9,6 @@ tags:
 layout: post
 excerpt: Tips and tricks to make websites load faster.
 image: images/projects/apogee.png
-crosspost_to_medium: true
 
 ---
 College fests are irreplaceable delights of a college student's life. Each college tries to make its fest bigger yet different than others' and so is case with fest websites. These fest websites stand as expression of creativity of its makers which more often than not leads to a large page load time and poor user experience. While working on websites for <a target='_blank' href="http://bits-oasis.org/2015main/"> Oasis </a> and <a target='_blank' href="http://bits-apogee.org/2016/"> Apogee </a> at Department of Visual Media, I explored a few techniques to make the sites faster. Here are a few of them. Both graphics designers and front-end developers might find the blog helpful.

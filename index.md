@@ -8,15 +8,35 @@ I am an engineer with the systems group at [Microsoft Research India](https://ww
 
 ## Publications
 
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/binnet.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Learning Digital Circuits: A Journey Through Weight Invariant Self-Pruning Neural Networks** <br>
+      Amey Agrawal, and Rohit Karlupiya <br>
+      *Proceedings of New in ML Workshop, NeurIPS, 2019, Vancouver* [\[paper\]](https://arxiv.org/abs/1909.00052)
+  </p>
+</div>
 
-- **Learning Digital Circuits: A Journey Through Weight Invariant Self-Pruning Neural Networks** <br>
-  Amey Agrawal, and Rohit Karlupiya <br>
-  *Proceedings of New in ML Workshop, NeurIPS, 2019, Vancouver* [\[paper\]](https://arxiv.org/abs/1909.00052)
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/delog.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Delog: A Privacy Preserving Log Filtering Framework for Online Compute Platforms** <br>
+      Amey Agrawal, Abhishek Dixit, Namrata Shettar, Darshil Kapadia, Rohit Karlupiya, Vikram Agrawal, and Rajat Gupta <br>
+      *Proceedings of IEEE International Conference on Big Data, 2019, Los Angeles* [\[paper\]](https://arxiv.org/abs/1902.04843)
+  </p>
+</div>
 
-- **Delog: A Privacy Preserving Log Filtering Framework for Online Compute Platforms** <br>
-  Amey Agrawal, Abhishek Dixit, Namrata Shettar, Darshil Kapadia, Rohit Karlupiya, Vikram Agrawal, and Rajat Gupta <br>
-  *Proceedings of IEEE International Conference on Big Data, 2019, Los Angeles* [\[paper\]](https://arxiv.org/abs/1902.04843)
-
-- **Logan: A Distributed Online Log Parser** <br>
-  Amey Agrawal, Rajat Gupta, and Rohit Karlupiya <br>
-  *Proceedings of IEEE International Conference on Data Engineering (ICDE), 2019, Macau* [\[paper\]](https://ieeexplore.ieee.org/document/8731527)
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/logan.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Logan: A Distributed Online Log Parser** <br>
+      Amey Agrawal, Rajat Gupta, and Rohit Karlupiya <br>
+      *Proceedings of IEEE International Conference on Data Engineering (ICDE), 2019, Macau* [\[paper\]](https://ieeexplore.ieee.org/document/8731527)
+  </p>
+</div>

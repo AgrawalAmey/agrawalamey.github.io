@@ -955,3 +955,39 @@ canvas {
     }
   }
 }
+
+.project-line-item-thumbnail {
+  display: block;
+  max-height: 6em;
+  border-radius: 10px;
+}
+
+.project-line-item {
+  margin-bottom: 1em !important;
+}
+
+.project-line-item-description {
+  display: inline-block;
+  margin-left: 0;
+  max-width: 75%;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1100px) {
+  .project-line-item-thumbnail {
+    display: none;
+  }
+
+  .project-line-item-description {
+    max-width: 100%;
+  }
+}
+
+.project-line-item-thumbnail-wrapper {
+  height: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 8em;
+  min-width: 8em;
+  margin-right: 0.5em;
+}
