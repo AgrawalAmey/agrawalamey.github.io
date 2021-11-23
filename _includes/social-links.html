@@ -120,6 +120,16 @@
       <a class="social-btn" href="https://news.ycombinator.com/user?id={{ site.hackernews }}" target="_blank" rel="noopener noreferrer">
         <i class="fa fa-hacker-news"></i>
       </a>
+    </li>{% endif %} {% if site.gscholar %}
+    <li>
+      <a class="social-btn" href="https://scholar.google.co.in/citations?hl=en&user={{ site.gscholar }}&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>{% endif %} {% if site.semscholar %}
+    <li>
+      <a class="social-btn" href="https://www.semanticscholar.org/author/{{ site.semscholar }}" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-semantic-scholar"></i>
+      </a>
     </li>{% endif %}
   </ul>
 </div>

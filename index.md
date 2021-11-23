@@ -4,9 +4,9 @@ layout: home
 
 # Amey Agrawal
 
-I am an engineer with the systems group at [Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/). I am currently working on low-level systems for Azure’s globally distributed AI infrastructure service under the supervision of [https://www.microsoft.com/en-us/research/people/muthian/](Dr. Muthian Sivathanu). Prior to that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up, where I built several components of the Apache Spark-based data science platform and worked on applications of machine learning for software engineering problems. I am applying for Ph.D. programs this Fall with focus on ML for systems and systems for ML.
+I am an engineer with the systems group at [Microsoft Research India](https://www.microsoft.com/en-us/research/lab/microsoft-research-india/). I am currently working on low-level systems for Azure’s globally distributed AI infrastructure service under the supervision of [https://www.microsoft.com/en-us/research/people/muthian/](Dr. Muthian Sivathanu). Prior to that, I spent a couple of years working at [https://www.qubole.com/](Qubole), a big data platform start-up, where I built several components of the Apache Spark-based data science platform and worked on applications of machine learning for software engineering problems. I graduated with B.E. (Hons.) in Computer Science from BITS Pilani, India in 2018. I am applying for Ph.D. programs this Fall with focus on ML for systems and systems for ML. For more details, refer to [https://ameya.info/docs/cv.pdf](my resume) or drop me an [agrawalamey12@gmail.com](email).
 
-## Research
+## Publications
 
 
 - **Learning Digital Circuits: A Journey Through Weight Invariant Self-Pruning Neural Networks** <br>

@@ -1,5 +1,5 @@
 ---
-title: Shannon's Mouse
+title: Amey Agrawal
 timezone: UTC
 collections:
   posts:
@@ -8,10 +8,10 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: In the maze of life.
+description: Building systems for ML at Microsoft Research India.
 url: https://agrawalamey.github.io
 logo: logo.png
-smallLogo: logo_small.png
+smallLogo: me.png
 locale: en_US
 background:
   homepage: images/home.jpg
@@ -34,6 +34,8 @@ email: agrawalamey12@gmail.com
 github: AgrawalAmey
 linkedin: agrawalamey
 twitter: agrawalamey12
+gscholar: CXqdg3oAAAAJ
+semscholar: Amey-Agrawal/70203043
 gems:
 - jekyll-feed
 - jekyll-sitemap
