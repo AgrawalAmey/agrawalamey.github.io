@@ -92,7 +92,7 @@ I am an engineer with the systems group at [Microsoft Research India](https://ww
     **Deep Reinforcement Learning for Autonomous Warehouse Robots** <br>
       Advisor: [Prof. Surekha Bhanot](https://www.bits-pilani.ac.in/Pilani/surekha/profile)<br>
 
-      A framework to create Q-learning agents for autonomously navigation tasks in warehouses. The agents are pre-trained in a custom simulation environment built on top of V-REP, a popular robotics simulation package.
+      A framework to create Q-learning agents for autonomous navigation tasks in warehouses. The agents are pre-trained in a custom simulation environment built on top of V-REP, a popular robotics simulation package.
       [\[code\]](https://github.com/AgrawalAmey/rl-car)
   </p>
 </div>
