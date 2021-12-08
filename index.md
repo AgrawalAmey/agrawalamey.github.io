@@ -67,7 +67,7 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
     **Learning Efficient Job Placement Policy for ETL jobs on Big Data Platforms** <br>
       Mentors: [Joydeep Sen Sarma](https://www.linkedin.com/in/joydeeps/?originalSubdomain=in), [Rohit Karlupia](https://www.linkedin.com/in/rohitkarlupia?originalSubdomain=in) <br>
 
-      A learnt scheduling algorithm that leverages recurrent nature of ETL worloads to minimize operational cost with optimal job placement.  
+      A learnt scheduling algorithm that leverages recurrent nature of ETL worloads to minimize operational cost by optimal job placement.  
   </p>
 </div>
 
@@ -79,7 +79,7 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
     **Callisto: Bringing Jupyter notebooks to classroom** <br>
       Advisor: [Prof. Surekha Bhanot](https://www.bits-pilani.ac.in/Pilani/surekha/profile) <br>
 
-      A cross-platform desktop application to host and grade assignments designed in Jupyter notebook. The system strives to lower the barrier to entry in the scientific Python ecosystem for newcomers by providing a one-click development environment setup and Google Colab like interface for hosted assignments. This work was later presented at PyCon India, 2020.
+      A cross-platform desktop application to host and grade assignments designed in Jupyter notebook. The system strives to lower the barrier to entry in the scientific Python ecosystem for newcomers by providing a one-click setup of development environment and Google Colab like interface for hosted assignments. This work was later presented at PyCon India, 2020.
       [\[blog\]](https://agrawalamey.github.io/lessons-from-conducting-machine-learning-course-with-jupyter-notebooks/) [\[code\]](https://github.com/AgrawalAmey/nnfl-app) [\[demo\]](https://www.youtube.com/watch?v=fiKaIJcfsAs&feature=youtu.be)
   </p>
 </div>
@@ -105,7 +105,7 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
     **Disentanglement Learning for Iris Image Indexing** <br>
       Advisor: [Prof. Kamlesh Tiwari](http://www.ktiwari.in/) <br>
 
-      An autoencoder architecture to learn representations of normalized Iris images robust to geometric variations that occur in real-world Iris samples.
+      An autoencoder architecture to learn representations of normalized Iris images that are robust to geometric variations which occur in real-world Iris samples.
       [\[blog\]](https://agrawalamey.github.io/neural-transformation/) [\[code\]](https://colab.research.google.com/drive/1hvf6VssjzgJssax4OdNg1hlMhWj9tQc2)
   </p>
 </div>
