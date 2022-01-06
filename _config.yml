@@ -10,7 +10,7 @@ collections:
     output: true
 description: Building systems for ML at Microsoft Research India.
 url: https://agrawalamey.github.io
-logo: me.jpeg
+logo: logo.png
 smallLogo: me.jpeg
 locale: en_US
 background:
