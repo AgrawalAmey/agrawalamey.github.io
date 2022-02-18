@@ -10,6 +10,17 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sing.jpg">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Singularity: Planet-Scale, Preemptible and Elastic Scheduling of AI Workloads** <br>
+      Singularity Team, Microsoft <br>
+      *Preprint: arXiv:2202.07848 (2022)* [\[pdf\]](https://arxiv.org/abs/2202.07848) <br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/binnet.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
@@ -46,7 +57,7 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
 </div>
 
 ## Select Projects
-
+<!-- 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sing.jpg">
@@ -57,7 +68,7 @@ I am a systems engineer at [Microsoft Research India](https://www.microsoft.com/
 
       Creating a proxy layer for GPU drivers that enables transparent checkpointing and time slicing for distributed deep learning training workloads with minimal overhead. Efficient device sharing between data-parallel peers enabled by this system would power-efficient job scheduling and resource management on Microsoft’s next-generation deep learning platform.
   </p>
-</div>
+</div> -->
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
