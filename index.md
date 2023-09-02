@@ -10,7 +10,7 @@ I am a PhD student at [Georgia Tech](https://www.gatech.edu/), where I work with
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sarathi.jpg">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sarathi.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
     **Sarathi: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills** <br>
@@ -21,7 +21,7 @@ I am a PhD student at [Georgia Tech](https://www.gatech.edu/), where I work with
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.jpg">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
     **DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization** <br>
