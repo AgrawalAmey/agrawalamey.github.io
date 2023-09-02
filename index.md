@@ -10,6 +10,28 @@ I am a PhD student at [Georgia Tech](https://www.gatech.edu/), where I work with
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sarathi.jpg">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Sarathi: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills** <br>
+      Amey Agrawal, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani and Ramachandran Ramjee <br>
+      *Preprint: arXiv:2308.16369 (2023)* [\[pdf\]](https://arxiv.org/abs/2308.16369) <br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.jpg">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization** <br>
+      Amey Agrawal, Sameer Reddy, Satwik Bhattamishra, Venkata Prabhakara Sarath Nookala, Vidushi Vashishth, Kexin Rong, Alexey Tumanov <br>
+      *Preprint: arXiv:2306.11800 (2023)* [\[pdf\]](https://arxiv.org/abs/2306.11800) <br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sing.jpg">
   </div>
   <p class="project-line-item-description" markdown='1'>
