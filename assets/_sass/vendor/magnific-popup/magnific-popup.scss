@@ -235,7 +235,7 @@ button {
   text-decoration: none;
   text-align: center;
   opacity: $mfp-controls-opacity;
-  padding: 0 0 18px 10px;
+  padding: 0 0 16px 10px;
   color: $mfp-controls-color;
 
   font-style: normal;
@@ -274,7 +274,7 @@ button {
   right: 0;
   color: $mfp-controls-text-color;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 16px;
   white-space: nowrap;
 }
 
@@ -440,7 +440,7 @@ button {
   }
   .mfp-title {
     text-align: left;
-    line-height: 18px;
+    line-height: 16px;
     color: $mfp-caption-title-color;
     word-wrap: break-word;
     padding-right: 36px; // leave some space for counter at right side

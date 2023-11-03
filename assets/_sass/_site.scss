@@ -297,7 +297,7 @@ canvas {
   }
   ul {
     font-size: 25px !important;
-    margin-top: 18px !important;
+    margin-top: 16px !important;
   } 
 }
 
@@ -591,9 +591,9 @@ canvas {
     color: rgba($overlay-color, 0.7);
   }
   p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
-    color: #6c6c6c;
+    color: #444;
     margin-bottom: 1.3em;
   }
   small {
@@ -861,7 +861,7 @@ canvas {
     font-size: 1.2rem;
     max-width: 70vw;
     ul {
-      font-size: 18px !important;
+      font-size: 16px !important;
     }
   }
 
@@ -913,7 +913,7 @@ canvas {
 }
 .entry-title > a{
   border: none !important;
-  font-size: 18px; 
+  font-size: 16px; 
 }
 .pagination {
   display: flex;
