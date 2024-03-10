@@ -12,6 +12,29 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sarathi-serve.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve** <br>
+      Amey Agrawal, Nitin Kedia, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani, Alexey Tumanov, and Ramachandran Ramjee <br>
+      *Preprint: arXiv:2403.02310 (2024)* [\[pdf\]](https://arxiv.org/abs/2403.02310) <br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/vidur.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Vidur: A Large Scale Simulation Framework For Llm Inference** <br>
+      Amey Agrawal, Nitin Kedia, Jayashree Mohan, Ashish Panwar, Nipun Kwatra, Bhargav S. Gulavani, Ramachandran Ramjee, and Alexey Tumanov  <br>
+      *7th Annual Conference on Machine Learning Systems (MLSys'24), Santa Clara*  <br>
+  </p>
+</div>
+
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/sarathi.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
