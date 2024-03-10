@@ -26,7 +26,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/vidur.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
-    **Vidur: A Large Scale Simulation Framework For Llm Inference** <br>
+    **Vidur: A Large Scale Simulation Framework For LLM Inference** <br>
       Amey Agrawal, Nitin Kedia, Jayashree Mohan, Ashish Panwar, Nipun Kwatra, Bhargav S. Gulavani, Ramachandran Ramjee, and Alexey Tumanov  <br>
       *7th Annual Conference on Machine Learning Systems (MLSys'24), Santa Clara*  <br>
   </p>
