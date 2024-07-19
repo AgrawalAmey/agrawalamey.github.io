@@ -4,11 +4,22 @@ layout: home
 
 # Amey Agrawal
 
-I am a PhD student at Georgia Tech where I am advised by [Prof. Alexey Tumanov](https://faculty.cc.gatech.edu/~atumanov/). I have been working as a research intern at Microsoft Research with [Dr. Ramachandran Ramjee's](https://www.microsoft.com/en-us/research/people/ramjee/) team since summer'23. My primary area of interest is systems for machine learning.
+I am a PhD student at Georgia Tech where I am advised by [Prof. Alexey Tumanov](https://faculty.cc.gatech.edu/~atumanov/). My primary area of interest is systems for foundation models.
 
 Previously, I was a research engineer at Microsoft Research, where I worked in [Dr. Muthian Sivathanu's](https://www.microsoft.com/en-us/research/people/muthian/) team on low-level systems for deep learning infrastructure. Before that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up. I did my bachelor's in Computer Science from BITS Pilani, India in 2018. For more details, refer to [my resume](https://ameya.info/docs/cv.pdf) or drop me an [email](mailto:agrawalamey12@gmail.com).
 
 ## Publications
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="https://github.com/project-metron/metron/blob/main/docs/_static/assets/deadline.png?raw=true">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Metron: Holistic Performance Evaluation Framework for LLM Inference Systems** <br>
+      Amey Agrawal*, Anmol Agarwal*, Nitin Kedia, Jayashree Mohan, Souvik Kundu, Nipun Kwatra, Ramachandran Ramjee, Alexey Tumanov <br>
+      *Preprint: arXiv:2407.07000 (2024)* [\[pdf\]](https://arxiv.org/pdf/2407.07000) [\[code\]](https://github.com/project-metron/metron) <br>
+  </p>
+</div>
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
@@ -17,7 +28,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   <p class="project-line-item-description" markdown='1'>
     **Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve** <br>
       Amey Agrawal, Nitin Kedia, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani, Alexey Tumanov, and Ramachandran Ramjee <br>
-      *Preprint: arXiv:2403.02310 (2024)* [\[pdf\]](https://arxiv.org/abs/2403.02310) <br>
+      *18th USENIX Symposium on Operating Systems Design and Implementation (OSDI’24), Santa Clara* [\[pdf\]](https://www.usenix.org/system/files/osdi24-agrawal.pdf) [\[code\]](https://github.com/microsoft/sarathi-serve) [\[video\]](https://www.usenix.org/conference/osdi24/presentation/agrawal) <br>
   </p>
 </div>
 
@@ -28,7 +39,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   <p class="project-line-item-description" markdown='1'>
     **Vidur: A Large Scale Simulation Framework For LLM Inference** <br>
       Amey Agrawal, Nitin Kedia, Jayashree Mohan, Ashish Panwar, Nipun Kwatra, Bhargav S. Gulavani, Ramachandran Ramjee, and Alexey Tumanov  <br>
-      *7th Annual Conference on Machine Learning Systems (MLSys'24), Santa Clara*  <br>
+      *7th Annual Conference on Machine Learning Systems (MLSys'24), Santa Clara* [\[pdf\]](https://proceedings.mlsys.org/paper_files/paper/2024/file/b74a8de47d2b3c928360e0a011f48351-Paper-Conference.pdf) [\[code\]](https://github.com/microsoft/vidur) [\[video\]](https://mlsys.org/virtual/2024/poster/2667) <br>
   </p>
 </div>
 
