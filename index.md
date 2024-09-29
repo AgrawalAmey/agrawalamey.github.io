@@ -10,6 +10,29 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
 
 ## Publications
 
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization** <br>
+      Amey Agrawal, Sameer Reddy, Satwik Bhattamishra, Venkata Prabhakara Sarath Nookala, Vidushi Vashishth, Kexin Rong, Alexey Tumanov <br>
+      *15th ACM Symposium on Cloud Computing (SoCC 2024), Redmond* [\[pdf\]](https://arxiv.org/abs/2306.11800) <br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/mnemosyne.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Mnemosyne: Parallelization Strategies for Efficiently Serving Multi-Million Context Length LLM Inference Requests Without Approximations** <br>
+      Amey Agrawal, Junda Chen, Íñigo Goiri, Ramachandran Ramjee, Chaojie Zhang, Alexey Tumanov, Esha Choukse <br>
+      *Preprint: arXiv:2409.17264 (2024)* [\[pdf\]](https://arxiv.org/pdf/2409.17264)<br>
+  </p>
+</div>
+
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="https://github.com/project-metron/metron/blob/main/docs/_static/assets/deadline.png?raw=true">
@@ -52,17 +75,6 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
     **Sarathi: Efficient LLM Inference by Piggybacking Decodes with Chunked Prefills** <br>
       Amey Agrawal, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani and Ramachandran Ramjee <br>
       *Preprint: arXiv:2308.16369 (2023)* [\[pdf\]](https://arxiv.org/abs/2308.16369) <br>
-  </p>
-</div>
-
-<div class='project-line-item'>
-  <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.png">
-  </div>
-  <p class="project-line-item-description" markdown='1'>
-    **DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization** <br>
-      Amey Agrawal, Sameer Reddy, Satwik Bhattamishra, Venkata Prabhakara Sarath Nookala, Vidushi Vashishth, Kexin Rong, Alexey Tumanov <br>
-      *Preprint: arXiv:2306.11800 (2023)* [\[pdf\]](https://arxiv.org/abs/2306.11800) <br>
   </p>
 </div>
 
