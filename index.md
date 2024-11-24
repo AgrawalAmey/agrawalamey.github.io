@@ -6,7 +6,7 @@ layout: home
 
 I am a PhD student at Georgia Tech where I am advised by [Prof. Alexey Tumanov](https://faculty.cc.gatech.edu/~atumanov/). My primary area of interest is systems for foundation models.
 
-Previously, I was a research engineer at Microsoft Research, where I worked in [Dr. Muthian Sivathanu's](https://www.microsoft.com/en-us/research/people/muthian/) team on low-level systems for deep learning infrastructure. Before that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up. I did my bachelor's in Computer Science from BITS Pilani, India in 2018. For more details, refer to [my resume](https://ameya.info/docs/cv.pdf) or drop me an [email](mailto:agrawalamey12@gmail.com).
+Previously, I was a research engineer at Microsoft Research, where I worked in [Dr. Muthian Sivathanu's](https://www.microsoft.com/en-us/research/people/muthian/) team on low-level systems for deep learning infrastructure. Before that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up. I did my bachelor's in Computer Science from BITS Pilani, India in 2018. For more details, refer to [my resume](https://ameya.info/docs/cv.pdf) or drop me an [email](mailto:agrawalamey12@gmail.com). *I am looking for summer internships!*
 
 ## Publications
 
@@ -22,7 +22,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   </p>
 </div>
 
-<div class='project-line-item'>
+<div class='project-line-item'>to for summer 
   <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/mnemosyne.png">
   </div>
