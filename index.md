@@ -22,7 +22,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   </p>
 </div>
 
-<div class='project-line-item'>to for summer 
+<div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/mnemosyne.png">
   </div>
