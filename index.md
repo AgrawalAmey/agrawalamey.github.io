@@ -13,23 +13,34 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/medha.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Medha: Efficiently Serving Multi-Million Context Length LLM Inference Requests Without Approximations** <br>
+      Amey Agrawal, Haoran Qiu, Junda Chen, Íñigo Goiri, Ramachandran Ramjee, Chaojie Zhang, Alexey Tumanov, Esha Choukse <br>
+      *Preprint: arXiv:2409.17264 (2025)* [\[pdf\]](https://arxiv.org/pdf/2409.17264)<br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/maya.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **Maya: Optimizing Deep Learning Training Workloads using Emulated Virtual Accelerators** <br>
+      Srihas Yarlagadda, Amey Agrawal, Elton Pinto, Hakesh Darapaneni, Mitali Meratwal, Shivam Mittal, Pranavi Bajjuri, Srinivas Sridharan, Alexey Tumanov <br>
+      *Preprint: arXiv:2503.20191 (2025)* [\[pdf\]](https://arxiv.org/pdf/2503.20191)<br>
+  </p>
+</div>
+
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
     <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/dynaquant.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
     **DynaQuant: Compressing Deep Learning Training Checkpoints via Dynamic Quantization** <br>
       Amey Agrawal, Sameer Reddy, Satwik Bhattamishra, Venkata Prabhakara Sarath Nookala, Vidushi Vashishth, Kexin Rong, Alexey Tumanov <br>
       *15th ACM Symposium on Cloud Computing (SoCC 2024), Redmond* [\[pdf\]](https://arxiv.org/abs/2306.11800) <br>
-  </p>
-</div>
-
-<div class='project-line-item'>
-  <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/mnemosyne.png">
-  </div>
-  <p class="project-line-item-description" markdown='1'>
-    **Mnemosyne: Parallelization Strategies for Efficiently Serving Multi-Million Context Length LLM Inference Requests Without Approximations** <br>
-      Amey Agrawal, Junda Chen, Íñigo Goiri, Ramachandran Ramjee, Chaojie Zhang, Alexey Tumanov, Esha Choukse <br>
-      *Preprint: arXiv:2409.17264 (2024)* [\[pdf\]](https://arxiv.org/pdf/2409.17264)<br>
   </p>
 </div>
 
