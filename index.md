@@ -28,7 +28,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   </div>
   <p class="project-line-item-description" markdown='1'>
     **Maya: Optimizing Deep Learning Training Workloads using Emulated Virtual Accelerators** <br>
-      Srihas Yarlagadda, Amey Agrawal, Elton Pinto, Hakesh Darapaneni, Mitali Meratwal, Shivam Mittal, Pranavi Bajjuri, Srinivas Sridharan, Alexey Tumanov <br>
+      Srihas Yarlagadda*, Amey Agrawal*, Elton Pinto*, Hakesh Darapaneni, Mitali Meratwal, Shivam Mittal, Pranavi Bajjuri, Srinivas Sridharan, Alexey Tumanov <br>
       *Preprint: arXiv:2503.20191 (2025)* [\[pdf\]](https://arxiv.org/pdf/2503.20191)<br>
   </p>
 </div>
