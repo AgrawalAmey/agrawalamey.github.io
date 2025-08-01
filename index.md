@@ -12,7 +12,7 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/medha.png">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/eval-checklist.png">
   </div>
   <p class="project-line-item-description" markdown='1'>
     **On Evaluating Performance of LLM Inference Serving Systems** <br>
