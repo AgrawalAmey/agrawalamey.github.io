@@ -1,0 +1,23 @@
+---
+// SelectThemeLoader.astro
+---
+
+<script is:inline>
+  // Theme selection loader
+  const getTheme = () => {
+    const storedTheme = localStorage.getItem('theme');
+    const themeHash = document.documentElement.dataset.themeHash;
+    const storedHash = localStorage.getItem('themeHash');
+    
+    if (storedTheme && storedHash === themeHash) {
+      return storedTheme;
+    }
+    
+    return document.documentElement.dataset.theme;
+  };
+
+  const theme = getTheme();
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
+</script>

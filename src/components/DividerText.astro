@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string
+}
+const { text } = Astro.props
+---
+
+<div class="flex gap-3 items-center my-6 font-mono text-sm">
+  <span class="text-accent">$</span>
+  <span class="text-foreground/60">{text?.toLowerCase().replace(' ', '-') || ''}</span>
+  <span class="flex-1 border-b border-dashed border-foreground/20"></span>
+</div>

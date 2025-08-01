@@ -1,0 +1,35 @@
+---
+// Search.astro - Simple search component
+---
+
+<div class="search-container">
+  <input
+    type="search"
+    id="search"
+    placeholder="Search posts..."
+    class="w-full px-4 py-2 bg-background border border-foreground/20 rounded text-foreground placeholder:text-foreground/40"
+  />
+</div>
+
+<script>
+  const searchInput = document.getElementById('search') as HTMLInputElement;
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase();
+      const posts = document.querySelectorAll('[data-searchable]');
+      
+      posts.forEach((post) => {
+        const text = post.textContent?.toLowerCase() || '';
+        const parent = post.parentElement;
+        if (parent) {
+          if (query && !text.includes(query)) {
+            parent.style.display = 'none';
+          } else {
+            parent.style.display = '';
+          }
+        }
+      });
+    });
+  }
+</script>

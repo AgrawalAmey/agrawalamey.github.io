@@ -1,0 +1,27 @@
+---
+
+---
+
+<script is:inline>
+  ;(function loadTheme() {
+    const goodThemes = [
+      'ayu-dark',
+      'nord',
+      'github-dark',
+      'tokyo-night',
+    ]
+    
+    const pageThemeHash = document.documentElement.getAttribute('data-theme-hash')
+    if (!pageThemeHash) {
+      throw new Error('Theme hash attribute is required.')
+    }
+    
+    // Check if we already have a theme for this session
+    const sessionTheme = sessionStorage.getItem('data-theme')
+    const sessionThemeHash = sessionStorage.getItem('data-theme-hash')
+    const themeHashMatches = sessionThemeHash === pageThemeHash
+    
+    const selectedTheme = goodThemes[Math.floor(Math.random() * goodThemes.length)]
+    document.documentElement.setAttribute('data-theme', selectedTheme)
+  })()
+</script>

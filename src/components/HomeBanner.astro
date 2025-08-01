@@ -1,0 +1,221 @@
+---
+import { Image } from 'astro:assets'
+import ReactGithubCalendar from './ReactGithubCalendar'
+import type { FrontmatterImage } from '../types'
+
+interface Props {
+  avatarImage?: FrontmatterImage
+  githubCalendar?: string
+}
+const { avatarImage, githubCalendar } = Astro.props
+---
+
+<div class="terminal-session my-4">
+  <div class="terminal-header">
+    <span class="terminal-prompt">$</span>
+    <span class="terminal-command">whoami</span>
+  </div>
+  <div class="terminal-output prose prose-sm sm:prose-base max-w-none">
+    <slot />
+  </div>
+  {
+    githubCalendar && (
+      <div class="mt-8 pt-6 border-t border-dashed border-foreground/20">
+        <div class="terminal-header mb-4">
+          <span class="terminal-prompt">$</span>
+          <span class="terminal-command">git log --graph</span>
+        </div>
+        <div class="h-42">
+          <ReactGithubCalendar username={githubCalendar} client:only />
+        </div>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .terminal-session {
+    font-family: var(--font-mono);
+  }
+
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .terminal-prompt {
+    color: var(--theme-accent);
+  }
+
+  .terminal-command {
+    color: var(--theme-foreground);
+  }
+
+
+
+
+  .terminal-output {
+    padding-top: 0.5rem;
+  }
+
+</style>
+
+<style is:global>
+  .github-calendar rect {
+    stroke: var(--theme-foreground) !important;
+    stroke-opacity: 0.1 !important;
+  }
+
+  .terminal-output p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  
+  .terminal-output p:first-child {
+    margin-top: 0;
+  }
+
+  .terminal-output a {
+    color: var(--theme-link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .terminal-output a:hover {
+    color: var(--theme-accent);
+  }
+
+  .terminal-output h3 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--theme-accent);
+    font-family: var(--font-mono);
+  }
+
+  .terminal-output h3::before {
+    content: '> ';
+    color: var(--theme-accent);
+    opacity: 0.6;
+  }
+
+  .terminal-output pre {
+    background: color-mix(in srgb, var(--theme-background) 95%, var(--theme-accent) 5%);
+    border: 1px solid var(--theme-accent);
+    border-opacity: 0.3;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .terminal-output code {
+    background: transparent;
+    color: var(--theme-foreground);
+  }
+
+  .terminal-output strong {
+    color: var(--theme-accent);
+    font-weight: 600;
+  }
+
+  .terminal-output p strong:first-child {
+    color: var(--theme-h3);
+  }
+
+  .intro-section {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .intro-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 0.5rem;
+    border: 2px solid var(--theme-accent);
+    opacity: 0.9;
+    flex-shrink: 0;
+  }
+
+  .terminal-output .experience-timeline {
+    margin: 1.5rem 0;
+    padding: 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    background: transparent;
+    width: 100%;
+  }
+
+  .timeline-item {
+    padding: 0.25rem 0;
+    line-height: 1.6;
+  }
+
+  .timeline-item .year {
+    color: var(--theme-accent);
+    font-weight: 600;
+    display: inline-block;
+    width: 3rem;
+    margin-right: -2px;
+  }
+
+  .timeline-item .arrow {
+    color: var(--theme-accent);
+    opacity: 0.6;
+    margin: 0 0.5rem;
+  }
+
+  .timeline-item .role {
+    color: var(--theme-h3);
+    font-weight: 600;
+  }
+
+  .timeline-item .detail {
+    color: var(--theme-foreground);
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .intro-section {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
+    .intro-image {
+      width: 140px;
+      height: 140px;
+      margin-bottom: 1rem;
+    }
+
+    .terminal-output .experience-timeline {
+      font-size: 0.8rem;
+      margin: 1rem 0;
+    }
+
+    .timeline-item .year {
+      width: 2.5rem;
+    }
+
+    .timeline-item .detail {
+      display: block;
+      margin-left: 2.5rem;
+      margin-top: 0.2rem;
+    }
+  }
+</style>

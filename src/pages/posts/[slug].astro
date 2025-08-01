@@ -1,0 +1,100 @@
+---
+import type { GetStaticPaths } from 'astro'
+import Layout from '@layouts/Layout.astro'
+import { dateString, getSortedPosts } from '@utils'
+import PostPreview from '@components/PostPreview.astro'
+import DividerText from '@components/DividerText.astro'
+import { getCollection, render } from 'astro:content'
+import TableOfContents from '@components/TableOfContents.astro'
+import { Image } from 'astro:assets'
+import GiscusLoader from '@components/GiscusLoader.astro'
+import siteConfig from '../../site.config'
+
+export const getStaticPaths = (async () => {
+  const posts = await getSortedPosts()
+  return posts.map((post, index) => {
+    const validPrev = index > 0
+    const validNext = index < posts.length - 1
+    const prev = validPrev ? posts[index - 1] : undefined
+    const next = validNext ? posts[index + 1] : undefined
+    return {
+      params: { slug: post.id },
+      props: { post, prev, next },
+    }
+  })
+}) satisfies GetStaticPaths
+
+const { post, prev, next } = Astro.props
+const postData = post.data
+const { headings, Content: PostContent } = await render(post)
+---
+
+<Layout
+  title={postData.title}
+  description={postData.description}
+  author={postData.author}
+  tags={postData.tags}
+>
+  <article class="max-w-full py-6 font-mono" data-pagefind-body>
+    <div class="flex items-center gap-2 mb-6 text-sm">
+      <span class="text-accent font-bold">$</span>
+      <span class="text-foreground/60">cat blog/{post.id}.md</span>
+    </div>
+    {
+      postData.coverImage && (
+        <Image
+          src={postData.coverImage.src}
+          alt={postData.coverImage.alt}
+          class="w-full rounded-lg mb-6 border-2 border-accent/20"
+        />
+      )
+    }
+    <h1 class="mb-4 text-2xl font-bold flex items-center gap-2">
+      <span class="text-accent">::</span>
+      {postData.title}
+    </h1>
+    <div class="text-sm text-foreground/60 mb-4 ml-8">
+      <time>{dateString(postData.published)}</time>
+      {
+        postData.author && (
+          <span class="before:content-[' • '] before:mx-1">
+            {postData.author}
+          </span>
+        )
+      }
+    </div>
+    {
+      postData.tags && (
+        <div class="text-xs mb-6 ml-8">
+          {postData.tags.map((tag) => (
+            <a
+              class="text-foreground/50 hover:text-accent mr-3 inline-block transition-colors"
+              href={`/tags/${encodeURIComponent(tag)}`}
+            >
+              [{tag}]
+            </a>
+          ))}
+        </div>
+      )
+    }
+    <div class="border-t border-dashed border-foreground/20 pt-6 mb-8">
+      <div class="flex flex-col xl:gap-8 2xl:gap-18 xl:flex-row xl:items-start">
+        {headings.length > 0 && <TableOfContents headings={headings} />}
+        <div class="mb-5 xl:min-w-[648px] 2xl:min-w-[688px] prose">
+          <PostContent />
+        </div>
+      </div>
+    </div>
+  </article>
+  {(prev || next) && <DividerText text="More Posts" />}
+  {prev && <PostPreview post={prev} />}
+  {next && <PostPreview post={next} />}
+  {
+    siteConfig.giscus && (
+      <>
+        <DividerText text="Comments" />
+        <GiscusLoader />
+      </>
+    )
+  }
+</Layout>

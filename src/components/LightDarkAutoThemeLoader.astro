@@ -1,0 +1,36 @@
+---
+// LightDarkAutoThemeLoader.astro
+---
+
+<script is:inline>
+  // Light/Dark auto theme loader
+  const getTheme = () => {
+    const themeHash = document.documentElement.dataset.themeHash;
+    const storedHash = localStorage.getItem('themeHash');
+    const storedTheme = localStorage.getItem('theme');
+    
+    if (storedTheme === 'auto' || !storedTheme || storedHash !== themeHash) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const lightTheme = document.documentElement.dataset.lightTheme;
+      const darkTheme = document.documentElement.dataset.darkTheme;
+      return prefersDark ? darkTheme : lightTheme;
+    }
+    
+    return storedTheme;
+  };
+
+  const theme = getTheme();
+  if (theme) {
+    document.documentElement.dataset.theme = theme;
+  }
+  
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'auto' || !storedTheme) {
+      const lightTheme = document.documentElement.dataset.lightTheme;
+      const darkTheme = document.documentElement.dataset.darkTheme;
+      document.documentElement.dataset.theme = e.matches ? darkTheme : lightTheme;
+    }
+  });
+</script>
