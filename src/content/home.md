@@ -17,7 +17,7 @@ avatarImage:
 
 <div class="experience-timeline">
 <div class="timeline-item">
-  <span class="year">2025</span><span class="role">Project Lead</span> @ Project Vajra <span class="detail">(14 MS + 3 PhD Students)</span>
+  <span class="year">2025</span><span class="role">Project Lead</span> @ Project Vajra
 </div>
 <div class="timeline-item">
   <span class="year">2025</span><span class="role">Research Intern</span> @ Microsoft Research <span class="detail">(Sadjad Fouladi & Ganesh Ananthanarayanan)</span>
