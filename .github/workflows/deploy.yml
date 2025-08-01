@@ -30,7 +30,9 @@ jobs:
         run: npm ci
 
       - name: Build Astro
-        run: npm run build
+        run: |
+          npm run build
+          touch ./dist/.nojekyll
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
