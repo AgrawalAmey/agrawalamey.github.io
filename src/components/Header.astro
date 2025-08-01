@@ -1,0 +1,90 @@
+---
+import siteConfig from '../site.config'
+import NavLink from './NavLink.astro'
+import SocialIcons from './SocialIcons.astro'
+
+---
+
+<header class="font-mono">
+  <div class="border border-foreground/20 rounded-sm p-3 mb-4">
+    <div class="flex items-center justify-between">
+      <a
+        id="logo"
+        href="/"
+        class="flex items-center gap-2 no-underline"
+      >
+        <span class="text-accent font-bold">$</span>
+        <span class="text-foreground font-semibold hidden sm:inline">~/amey-agrawal</span>
+        <span class="text-foreground font-semibold sm:hidden">~/amey</span>
+        <span class="text-accent opacity-70 animate-pulse">_</span>
+      </a>
+      <div class="flex items-center gap-4 sm:hidden">
+        <SocialIcons />
+        <nav id="nav-mobile" aria-label="Menu">
+        <button
+          id="nav-mobile-button"
+          class="text-accent hover:text-foreground transition-colors"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu-list"
+        >
+          [menu]
+        </button>
+        <ul
+          id="nav-mobile-list"
+          class="invisible absolute flex flex-col bg-background border border-foreground/20 m-0 p-3 top-10 right-0 z-50 rounded-sm"
+        >
+          {
+            siteConfig.navLinks.map((link) => (
+              <li class="py-1" aria-expanded="false">
+                <NavLink link={link} />
+              </li>
+            ))
+          }
+        </ul>
+        </nav>
+      </div>
+      <div class="hidden sm:flex items-center gap-6">
+        <nav aria-label="Menu">
+          <ul class="flex flex-row gap-4 text-sm">
+            {
+              siteConfig.navLinks.map((link) => (
+                <li>
+                  <NavLink link={link} />
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <div class="border-l border-foreground/20 pl-4">
+          <SocialIcons />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const navMobileButton = document.getElementById('nav-mobile-button')
+  const navMobileList = document.getElementById('nav-mobile-list')
+  const navMobileListItems = navMobileList?.querySelectorAll('li')
+  const toggleNavMobileMenu = (action: 'on' | 'off' | 'toggle') => {
+    let isNowOpen: boolean = false
+    if (action === 'on') {
+      isNowOpen = true
+      navMobileList?.classList.remove('invisible')
+    } else if (action === 'off') {
+      isNowOpen = false
+      navMobileList?.classList.add('invisible')
+    } else {
+      isNowOpen = !navMobileList?.classList.toggle('invisible')
+    }
+    navMobileButton?.setAttribute('aria-expanded', isNowOpen ? 'true' : 'false')
+    navMobileListItems?.forEach((listItem) => {
+      listItem.setAttribute('aria-expanded', isNowOpen ? 'true' : 'false')
+    })
+  }
+  navMobileButton?.addEventListener('click', (_ev) => {
+    toggleNavMobileMenu('toggle')
+  })
+</script>

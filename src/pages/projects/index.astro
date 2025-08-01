@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+import DividerText from '@components/DividerText.astro'
+import ProjectListing from '@components/ProjectListing.astro'
+
+const projects = await getCollection('projects')
+const sortedProjects = projects
+  .filter((project) => !project.data.draft)
+  .sort((a, b) => b.data.published.getTime() - a.data.published.getTime())
+---
+
+<Layout>
+  <DividerText>Selected Projects</DividerText>
+  <div class="projects-container">
+    {sortedProjects.map((project) => (
+      <ProjectListing project={project} />
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+</style>

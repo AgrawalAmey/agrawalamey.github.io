@@ -1,0 +1,59 @@
+---
+import { dateString } from '@utils'
+import { Icon } from 'astro-icon/components'
+import type { CollectionEntry } from 'astro:content'
+import { render } from 'astro:content'
+
+interface Props {
+  post: CollectionEntry<'posts'>
+}
+
+const { post } = Astro.props
+
+const { remarkPluginFrontmatter } = await render(post)
+const { minutesRead } = remarkPluginFrontmatter
+const description = remarkPluginFrontmatter.description || post.data.description
+---
+
+<article class="w-full py-4 my-3 font-mono">
+  <div class="flex items-baseline gap-2 mb-2">
+    <span class="text-accent font-bold">::</span>
+    <h2 class="text-lg font-semibold">
+      <a href={`/posts/${post.id}`} class="hover:text-accent transition-colors">
+        {post.data.title}
+      </a>
+    </h2>
+  </div>
+  <div class="text-sm text-foreground/60 ml-6 mb-2">
+    <time>{dateString(post.data.published)}</time>
+    {
+      post.data.author && (
+        <span class="before:content-[' • '] before:mx-1">
+          {post.data.author}
+        </span>
+      )
+    }
+    {
+      minutesRead && (
+        <span class="before:content-[' • '] before:mx-1">
+          {minutesRead}
+        </span>
+      )
+    }
+  </div>
+  {description && <p class="text-sm text-foreground/80 ml-6 mb-3 line-clamp-2">{description}</p>}
+  {
+    post.data.tags && (
+      <div class="text-xs ml-6">
+        {post.data.tags.map((tag) => (
+          <a
+            class="text-foreground/50 hover:text-accent mr-3 inline-block transition-colors"
+            href={`/tags/${encodeURIComponent(tag)}`}
+          >
+            [{tag}]
+          </a>
+        ))}
+      </div>
+    )
+  }
+</article>

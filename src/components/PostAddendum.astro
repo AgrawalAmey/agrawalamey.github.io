@@ -1,0 +1,32 @@
+---
+// PostAddendum.astro - Post metadata and social sharing
+import TagsSection from './TagsSection.astro'
+import { dateString } from '@utils'
+
+interface Props {
+  published?: Date
+  updated?: Date
+  tags?: string[]
+  backLink?: string
+  backLinkText?: string
+}
+
+const { published, updated, tags, backLink = '/posts', backLinkText = 'All posts' } = Astro.props
+---
+
+<div class="flex flex-col gap-4 text-sm text-foreground/60">
+  {published && (
+    <div class="flex gap-4">
+      <span>Published: {dateString(published)}</span>
+      {updated && <span>Updated: {dateString(updated)}</span>}
+    </div>
+  )}
+  
+  {tags && tags.length > 0 && (
+    <TagsSection tags={tags} />
+  )}
+  
+  <a href={backLink} class="text-accent hover:underline">
+    ← {backLinkText}
+  </a>
+</div>
