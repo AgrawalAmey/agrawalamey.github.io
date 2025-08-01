@@ -4,12 +4,22 @@ layout: home
 
 # Amey Agrawal
 
-I am a PhD student at Georgia Tech where I am advised by [Prof. Alexey Tumanov](https://faculty.cc.gatech.edu/~atumanov/). My primary area of interest is systems for foundation models.
+I am a final-year PhD student at Georgia Tech where I am advised by [Prof. Alexey Tumanov](https://faculty.cc.gatech.edu/~atumanov/). My primary area of interest is systems for foundation models.
 
-Previously, I was a research engineer at Microsoft Research, where I worked in [Dr. Muthian Sivathanu's](https://www.microsoft.com/en-us/research/people/muthian/) team on low-level systems for deep learning infrastructure. Before that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up. I did my bachelor's in Computer Science from BITS Pilani, India in 2018. For more details, refer to [my resume](https://ameya.info/docs/cv.pdf) or drop me an [email](mailto:agrawalamey12@gmail.com). *I am looking for summer internships!*
+Previously, I was a research engineer at Microsoft Research, where I worked in [Dr. Muthian Sivathanu's](https://www.microsoft.com/en-us/research/people/muthian/) team on low-level systems for deep learning infrastructure. Before that, I spent a couple of years working at [Qubole](https://www.qubole.com/), a big data platform start-up. I did my bachelor's in Computer Science from BITS Pilani, India in 2018. For more details, refer to [my resume](https://ameya.info/docs/cv.pdf) or drop me an [email](mailto:agrawalamey12@gmail.com).
 
-## Publications
+## Selected Projects
 
+<div class='project-line-item'>
+  <div class="project-line-item-thumbnail-wrapper">
+    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/medha.png">
+  </div>
+  <p class="project-line-item-description" markdown='1'>
+    **On Evaluating Performance of LLM Inference Serving Systems** <br>
+      Amey Agrawal, Nitin Kedia, Anmol Agarwal, Jayashree Mohan, Nipun Kwatra, Souvik Kundu, Ramachandran Ramjee, Alexey Tumanov <br>
+      *Preprint: arXiv:2507.09019 (2025)* [\[pdf\]](https://arxiv.org/pdf/2507.09019)<br>
+  </p>
+</div>
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
@@ -137,7 +147,6 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
   </p>
 </div>
 
-## Select Projects
 <!-- 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
@@ -150,18 +159,6 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
       Creating a proxy layer for GPU drivers that enables transparent checkpointing and time slicing for distributed deep learning training workloads with minimal overhead. Efficient device sharing between data-parallel peers enabled by this system would power-efficient job scheduling and resource management on Microsoft’s next-generation deep learning platform.
   </p>
 </div> -->
-
-<div class='project-line-item'>
-  <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/scheduler.jpg">
-  </div>
-  <p class="project-line-item-description" markdown='1'>
-    **Learning Efficient Job Placement Policy for ETL jobs on Big Data Platforms** <br>
-      Mentors: [Joydeep Sen Sarma](https://www.linkedin.com/in/joydeeps/?originalSubdomain=in), [Rohit Karlupia](https://www.linkedin.com/in/rohitkarlupia?originalSubdomain=in) <br>
-
-      A learnt scheduling algorithm that leverages recurrent nature of ETL worloads to minimize operational cost by optimal job placement.  
-  </p>
-</div>
 
 <div class='project-line-item'>
   <div class="project-line-item-thumbnail-wrapper">
@@ -199,18 +196,5 @@ Previously, I was a research engineer at Microsoft Research, where I worked in [
 
       An autoencoder architecture to learn representations of normalized Iris images that are robust to geometric variations which occur in real-world Iris samples.
       [\[blog\]](https://agrawalamey.github.io/neural-transformation/) [\[code\]](https://colab.research.google.com/drive/1hvf6VssjzgJssax4OdNg1hlMhWj9tQc2)
-  </p>
-</div>
-
-<div class='project-line-item'>
-  <div class="project-line-item-thumbnail-wrapper">
-    <img class="project-line-item-thumbnail" src="/images/project-list-thumbnails/inshorts.png">
-  </div>
-  <p class="project-line-item-description" markdown='1'>
-    **Automated news-in-shorts** <br>
-      Advisor: [Prof. Poonam Goyal](https://www.bits-pilani.ac.in/pilani/poonam/profile) <br>
-
-      A news aggregation system that collects the latest posts from RSS feeds of multiple news agencies to automatically generate abstracts for top stories. Trending topics on Twitter are mapped to news articles and generate extractive text summaries using a natural language processing pipeline.
-      [\[code\]](https://github.com/AgrawalAmey/automated-inshorts)
   </p>
 </div>
