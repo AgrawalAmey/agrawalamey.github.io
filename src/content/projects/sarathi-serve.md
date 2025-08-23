@@ -25,4 +25,4 @@ The widespread adoption of Large Language Models (LLMs) has led to a significant
 
 ## Impact
 
-Sarathi-Serve has been adopted in production systems and has influenced the design of several subsequent LLM serving frameworks. The techniques introduced in this work are fundamental to achieving efficient LLM deployment at scale.
+Sarathi-Serve has been widely adopted in production systems and has influenced the design of several subsequent LLM serving frameworks. The techniques introduced in this work are fundamental to achieving efficient LLM deployment at scale.
