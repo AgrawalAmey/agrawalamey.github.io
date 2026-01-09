@@ -17,19 +17,20 @@ avatarImage:
 
 <div class="experience-timeline">
 <div class="timeline-item">
-  <span class="year">2025</span><span class="role">Project Lead</span> @ Project Vajra
+  <span class="year">Present</span><span class="role">Project Lead</span> @ Project Vajra
+  <span class="detail">Mentor: Alexey Tumanov</span>
 </div>
 <div class="timeline-item">
-  <span class="year">2025</span><span class="role">Research Intern</span> @ Microsoft Research <span class="detail">(Sadjad Fouladi & Ganesh Ananthanarayanan)</span>
+  <span class="year">2025</span><span class="role">Research Intern</span> @ Microsoft Research <span class="detail">Mentors: Sadjad Fouladi & Ganesh Ananthanarayanan</span>
 </div>
 <div class="timeline-item">
-  <span class="year">2024</span><span class="role">Research Intern</span> @ Azure Systems Research   <span class="detail">(Esha Choukse)</span>
+  <span class="year">2024</span><span class="role">Research Intern</span> @ Azure Systems Research   <span class="detail">Mentor: Esha Choukse</span>
 </div>
 <div class="timeline-item">
-  <span class="year">2023</span><span class="role">Research Intern</span> @ MSR Research India <span class="detail">(Ram Ramjee & Bhargav Gulavani)</span>
+  <span class="year">2023</span><span class="role">Research Intern</span> @ MSR Research India <span class="detail">Mentors: Ram Ramjee & Bhargav Gulavani</span>
 </div>
 <div class="timeline-item">
-  <span class="year">2021</span><span class="role">Research Engineer II </span> @ Microsoft Research <span class="detail">(Muthian Sivathanu)</span>
+  <span class="year">2021</span><span class="role">Research Engineer II </span> @ Microsoft Research <span class="detail">Mentor: Muthian Sivathanu</span>
 </div>
 <div class="timeline-item">
   <span class="year">2018</span><span class="role">Member of Technical Staff II </span> @ Qubole
