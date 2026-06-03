@@ -1,6 +1,7 @@
 ---
 title: "On Evaluating Performance of LLM Inference Serving Systems"
 published: 2025-01-30
+venue: "SoCC'26"
 authors: "Amey Agrawal, Nitin Kedia, Anmol Agarwal, Jayashree Mohan, Nipun Kwatra, Souvik Kundu, Ramachandran Ramjee, Alexey Tumanov"
 description: "Guidelines and checklist for evaluating LLM inference serving systems"
 tags: ["LLM Inference", "Evaluation", "Performance", "Benchmarking"]
