@@ -6,9 +6,9 @@ avatarImage:
 
 <div class="intro-section">
   <div class="intro-text">
-    <strong>CS Ph.D. Student @ Georgia Tech</strong></br>
-    Research Area: <strong>Systems for AI</strong>, <strong>LLM Inference</strong>
-    <p>I'm a final-year PhD student advised by <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>, building high-performance systems for foundation models. Currently building <a href="https://project-vajra.github.io">Vajra</a> - the world's fastest open-source AI inference engine, designed for real-time multimodal agentic workloads. <em>We're looking for talented systems builders to join us!</em></p>
+    <strong>Building something new in AI inference</strong></br>
+    <strong>CS Ph.D., Georgia Tech</strong> · Research Area: <strong>Systems for AI</strong>, <strong>LLM Inference</strong>
+    <p>I recently completed my PhD at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>, building high-performance systems for foundation models. I'm now building something new in AI inference — a serving engine for real-time multimodal workloads. <em>We're looking for talented systems builders to join us!</em></p>
   </div>
   <img src="/content/me.enc" alt="Amey Agrawal" class="intro-image" />
 </div>
@@ -16,10 +16,6 @@ avatarImage:
 ### Experience Timeline
 
 <div class="experience-timeline">
-<div class="timeline-item">
-  <span class="year">Present</span><span class="role">Project Lead</span> @ Project Vajra
-  <span class="detail">Mentor: Alexey Tumanov</span>
-</div>
 <div class="timeline-item">
   <span class="year">2025</span><span class="role">Research Intern</span> @ Microsoft Research <span class="detail">Mentors: Sadjad Fouladi & Ganesh Ananthanarayanan</span>
 </div>
