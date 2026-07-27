@@ -7,7 +7,7 @@ const config: SiteConfig = {
   title: 'Amey Agrawal',
   // The description of your site, used for SEO and RSS feed.
   description:
-    'Building high-performance systems for AI inference. CS PhD, Georgia Tech.',
+    'Systems researcher working on real-time AI inference. PhD, Georgia Tech.',
   // The author of the site, used in the footer, SEO, and RSS feed.
   author: 'Amey Agrawal',
   // Keywords for SEO, used in the meta tags.
@@ -24,8 +24,8 @@ const config: SiteConfig = {
   // The navigation links to display in the header.
   navLinks: [
     {
-      name: 'Home',
-      url: '/',
+      name: 'Research',
+      url: '/#selected-systems',
     },
     {
       name: 'Blog',
@@ -37,7 +37,7 @@ const config: SiteConfig = {
       external: true,
     },
     {
-      name: 'Google Scholar',
+      name: 'Scholar',
       url: 'https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate',
       external: true,
     },

@@ -4,6 +4,7 @@ import { getSortedPosts } from '@utils'
 import { getCollection, render } from 'astro:content'
 import PostPreview from '@components/PostPreview.astro'
 import ProjectListing from '@components/ProjectListing.astro'
+import FeaturedProject from '@components/FeaturedProject.astro'
 import Pagination from '@components/Pagination.astro'
 import BlockHeader from '@components/BlockHeader.astro'
 import HomeBanner from '@components/HomeBanner.astro'
@@ -22,8 +23,27 @@ if (home.length > 0) {
 }
 const sortedPosts = await getSortedPosts()
 const projects = await getCollection('projects')
-const sortedProjects = projects
-  .sort((a, b) => b.data.published.getTime() - a.data.published.getTime())
+const sortedProjects = projects.sort(
+  (a, b) => b.data.published.getTime() - a.data.published.getTime(),
+)
+const featuredProjectOrder = ['sarathi-serve', 'vidur', 'medha', 'revati']
+const featuredEyebrows: Record<string, string> = {
+  'sarathi-serve': 'Scheduling + execution',
+  vidur: 'Capacity planning',
+  medha: 'Long-context serving',
+  revati: 'Emulation',
+}
+const featuredNames: Record<string, string> = {
+  'sarathi-serve': 'Sarathi-Serve',
+  vidur: 'Vidur',
+  medha: 'Medha',
+  revati: 'Revati',
+}
+const featuredProjects = featuredProjectOrder
+  .map((id) => projects.find((project) => project.id === id))
+  .filter((project): project is (typeof projects)[number] => Boolean(project))
+const featuredIds = new Set(featuredProjectOrder)
+const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(project.id))
 ---
 
 <Layout>
@@ -35,13 +55,55 @@ const sortedProjects = projects
     )
   }
 
-  <BlockHeader>ls projects/</BlockHeader>
-  <div class="all-projects">
-    {sortedProjects.map((project) => <ProjectListing project={project} />)}
-  </div>
+  <section id="selected-systems" aria-labelledby="selected-systems-heading">
+    <BlockHeader><span id="selected-systems-heading">selected research</span></BlockHeader
+    >
+    <p class="section-intro">
+      Selected work across scheduling, capacity planning, long-context serving, and
+      emulation.
+    </p>
+    <div class="featured-projects">
+      {
+        featuredProjects.map((project) => (
+          <FeaturedProject
+            project={project}
+            eyebrow={featuredEyebrows[project.id]}
+            name={featuredNames[project.id]}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section aria-labelledby="research-archive-heading">
+    <BlockHeader><span id="research-archive-heading">all publications</span></BlockHeader>
+    <div class="all-projects">
+      {archiveProjects.map((project) => <ProjectListing project={project} />)}
+    </div>
+  </section>
 </Layout>
 
 <style>
+  section {
+    scroll-margin-top: 1.5rem;
+  }
+
+  .section-intro {
+    max-width: 42rem;
+    margin: -0.25rem 0 1.25rem;
+    color: var(--theme-foreground);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    opacity: 0.7;
+    text-wrap: pretty;
+  }
+
+  .featured-projects {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 0 2.5rem;
+  }
+
   .all-projects {
     margin: 1.5rem 0;
   }
