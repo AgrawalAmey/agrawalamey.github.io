@@ -24,10 +24,6 @@ const config: SiteConfig = {
   // The navigation links to display in the header.
   navLinks: [
     {
-      name: 'Home',
-      url: '/',
-    },
-    {
       name: 'Research',
       url: '/#selected-systems',
     },
@@ -41,7 +37,7 @@ const config: SiteConfig = {
       external: true,
     },
     {
-      name: 'Google Scholar',
+      name: 'Scholar',
       url: 'https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate',
       external: true,
     },

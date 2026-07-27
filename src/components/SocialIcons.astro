@@ -42,12 +42,14 @@ const { socialLinks } = siteConfig
 <style>
   .social-icons {
     display: flex;
-    gap: 0.75rem;
+    gap: 0.1rem;
     align-items: center;
   }
 
   .social-icons a {
     display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
     align-items: center;
     justify-content: center;
     color: var(--theme-text-subtle);
@@ -64,10 +66,6 @@ const { socialLinks } = siteConfig
   }
 
   @media (max-width: 640px) {
-    .social-icons {
-      gap: 0.5rem;
-    }
-    
     .social-icons svg {
       width: 16px;
       height: 16px;
