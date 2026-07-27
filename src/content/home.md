@@ -7,7 +7,7 @@ avatarImage:
 <div class="intro-section">
   <div class="intro-text">
     <h1 class="founder-headline">Inference systems for interactive AI.</h1>
-    <p class="founder-deck">Today's serving stacks are built for turn-based text. I work on systems for continuous, multimodal inference.</p>
+    <p class="founder-deck">Today's serving stacks are built for turn-based text. My research develops systems for continuous, multimodal inference.</p>
   </div>
   <img src="/content/me.enc" alt="Amey Agrawal" class="intro-image" />
 </div>
