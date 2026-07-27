@@ -3,7 +3,7 @@ title: "Vidur: A Large Scale Simulation Framework For LLM Inference"
 published: 2024-05-01
 venue: "MLSys'24"
 authors: "Amey Agrawal, Nitin Kedia, Jayashree Mohan, Ashish Panwar, Nipun Kwatra, Bhargav S. Gulavani, Ramachandran Ramjee, and Alexey Tumanov"
-description: "Large-scale simulation for capacity planning and rapid deployment-space exploration in LLM serving"
+description: "Large-scale simulation for capacity planning and deployment exploration"
 tags: ["LLM Inference", "Simulation", "MLSys", "Systems"]
 thumbnail: "/project-list-thumbnails/vidur.png"
 links:

@@ -3,7 +3,7 @@ title: "Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve"
 published: 2024-08-01
 venue: "OSDI'24"
 authors: "Amey Agrawal, Nitin Kedia, Ashish Panwar, Jayashree Mohan, Nipun Kwatra, Bhargav S. Gulavani, Alexey Tumanov, and Ramachandran Ramjee"
-description: "Scheduler and execution co-design that improves the throughput-latency tradeoff in LLM serving"
+description: "Scheduler and execution co-design for better throughput and latency"
 tags: ["LLM Inference", "Systems", "OSDI", "Performance"]
 thumbnail: "/project-list-thumbnails/sarathi-serve.png"
 links:
