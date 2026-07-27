@@ -28,9 +28,9 @@ const sortedProjects = projects.sort(
 )
 const featuredProjectOrder = ['sarathi-serve', 'vidur', 'medha', 'revati']
 const featuredEyebrows: Record<string, string> = {
-  'sarathi-serve': 'Scheduling',
-  vidur: 'Simulation',
-  medha: 'Long context',
+  'sarathi-serve': 'Scheduling + execution',
+  vidur: 'Capacity planning',
+  medha: 'Long-context serving',
   revati: 'Emulation',
 }
 const featuredNames: Record<string, string> = {
@@ -59,7 +59,8 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
     <BlockHeader><span id="selected-systems-heading">selected research</span></BlockHeader
     >
     <p class="section-intro">
-      Selected publications and systems that reflect the main themes of my work.
+      My work spans the inference lifecycle, from scheduler and execution co-design to
+      capacity planning, long-context serving, and GPU-free emulation.
     </p>
     <div class="featured-projects">
       {
