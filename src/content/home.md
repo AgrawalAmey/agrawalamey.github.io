@@ -6,29 +6,24 @@ avatarImage:
 
 <div class="intro-section">
   <div class="intro-text">
-    <strong>Building something new in AI inference</strong></br>
-    <strong>CS Ph.D., Georgia Tech</strong> · Research Area: <strong>Systems for AI</strong>, <strong>LLM Inference</strong>
-    <p>I recently completed my PhD at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>, building high-performance systems for foundation models. I'm now building something new in AI inference — a serving engine for real-time multimodal workloads. <em>We're looking for talented systems builders to join us!</em></p>
+    <p class="status-line"><span class="status-dot" aria-hidden="true"></span><span><strong>Currently</strong> · building quietly in AI systems</span></p>
+    <h1 class="founder-headline">Inference systems for AI that can keep up with people.</h1>
+    <p class="founder-deck">Systems researcher turned technical founder, working at the boundary of high-performance computing and real-time, interactive AI.</p>
   </div>
   <img src="/content/me.enc" alt="Amey Agrawal" class="intro-image" />
 </div>
 
-### Experience Timeline
+<p class="founder-bio">I recently completed my PhD at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>. My work spans inference scheduling, large-scale simulation, long-context serving, GPU-free emulation, and data movement for foundation-model systems.</p>
 
-<div class="experience-timeline">
-<div class="timeline-item">
-  <span class="year">2025</span><span class="role">Research Intern</span> @ Microsoft Research <span class="detail">Mentors: Sadjad Fouladi & Ganesh Ananthanarayanan</span>
+<div class="intro-actions">
+  <a class="intro-action primary" href="#selected-systems">Explore selected systems <span aria-hidden="true">↓</span></a>
+  <a class="intro-action secondary" href="mailto:agrawalamey12@gmail.com">Build with me <span aria-hidden="true">↗</span></a>
 </div>
-<div class="timeline-item">
-  <span class="year">2024</span><span class="role">Research Intern</span> @ Azure Systems Research   <span class="detail">Mentor: Esha Choukse</span>
+
+<div class="proof-strip" aria-label="Selected credentials">
+  <div class="proof-item"><strong>PhD</strong><span>Georgia Tech</span></div>
+  <div class="proof-item"><strong>OSDI · MLSys</strong><span>Published systems</span></div>
+  <div class="proof-item"><strong>MSR · Azure</strong><span>Research experience</span></div>
 </div>
-<div class="timeline-item">
-  <span class="year">2023</span><span class="role">Research Intern</span> @ MSR Research India <span class="detail">Mentors: Ram Ramjee & Bhargav Gulavani</span>
-</div>
-<div class="timeline-item">
-  <span class="year">2021</span><span class="role">Research Engineer II </span> @ Microsoft Research <span class="detail">Mentor: Muthian Sivathanu</span>
-</div>
-<div class="timeline-item">
-  <span class="year">2018</span><span class="role">Member of Technical Staff II </span> @ Qubole
-</div>
-</div>
+
+<p class="quiet-note"><strong>What I’m looking for:</strong> people who care deeply about inference engines, distributed systems, and performance engineering.</p>

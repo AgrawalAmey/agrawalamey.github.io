@@ -36,6 +36,14 @@ const { avatarImage, githubCalendar } = Astro.props
 <style>
   .terminal-session {
     font-family: var(--font-mono);
+    margin-bottom: 2.5rem;
+    padding: 1.25rem;
+    border: 1px solid color-mix(in srgb, var(--theme-foreground) 12%, transparent);
+    border-radius: 0.875rem;
+    background: color-mix(in srgb, var(--theme-background) 97%, var(--theme-accent) 3%);
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.08),
+      0 18px 42px rgb(0 0 0 / 0.07);
   }
 
   .terminal-header {
@@ -55,13 +63,9 @@ const { avatarImage, githubCalendar } = Astro.props
     color: var(--theme-foreground);
   }
 
-
-
-
   .terminal-output {
-    padding-top: 0.5rem;
+    padding-top: 0.25rem;
   }
-
 </style>
 
 <style is:global>
@@ -71,10 +75,11 @@ const { avatarImage, githubCalendar } = Astro.props
   }
 
   .terminal-output p {
-    margin: 0.5rem 0;
-    line-height: 1.6;
+    margin: 0.75rem 0;
+    line-height: 1.65;
+    text-wrap: pretty;
   }
-  
+
   .terminal-output p:first-child {
     margin-top: 0;
   }
@@ -133,9 +138,9 @@ const { avatarImage, githubCalendar } = Astro.props
   .intro-section {
     display: flex;
     flex-direction: row;
-    gap: 1.5rem;
-    align-items: flex-start;
-    margin-bottom: 1.5rem;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
   }
 
   .intro-text {
@@ -144,78 +149,195 @@ const { avatarImage, githubCalendar } = Astro.props
   }
 
   .intro-image {
-    width: 160px;
-    height: 160px;
-    border-radius: 0.5rem;
-    border: 2px solid var(--theme-accent);
-    opacity: 0.9;
+    width: 132px;
+    height: 132px;
+    border-radius: 0.625rem;
+    object-fit: cover;
+    opacity: 0.95;
     flex-shrink: 0;
+    box-shadow:
+      0 0 0 1px rgb(255 255 255 / 0.1),
+      0 10px 28px rgb(0 0 0 / 0.16);
   }
 
-  .terminal-output .experience-timeline {
-    margin: 1.5rem 0;
-    padding: 0;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    background: transparent;
-    width: 100%;
-  }
-
-  .timeline-item {
-    padding: 0.25rem 0;
-    line-height: 1.6;
-  }
-
-  .timeline-item .year {
-    color: var(--theme-accent);
-    font-weight: 600;
-    display: inline-block;
-    width: 5rem;
-    margin-right: 0.5rem;
-  }
-
-  .timeline-item .arrow {
-    color: var(--theme-accent);
-    opacity: 0.6;
-    margin: 0 0.5rem;
-  }
-
-  .timeline-item .role {
-    color: var(--theme-h3);
-    font-weight: 600;
-  }
-
-  .timeline-item .detail {
+  .terminal-output .status-line {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 0 0 0.9rem;
     color: var(--theme-foreground);
-    opacity: 0.7;
-    font-size: 0.8rem;
+    font-size: 0.73rem;
+    letter-spacing: 0.03em;
+    opacity: 0.72;
+  }
+
+  .terminal-output .status-line strong {
+    color: var(--theme-accent);
+    text-transform: uppercase;
+  }
+
+  .status-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: var(--theme-accent);
+    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--theme-accent) 14%, transparent);
+  }
+
+  .terminal-output .founder-headline {
+    display: block;
+    max-width: 34rem;
+    margin: 0;
+    color: var(--theme-foreground);
+    font-size: clamp(1.65rem, 4vw, 2.3rem);
+    font-weight: 680;
+    letter-spacing: -0.045em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .terminal-output .founder-headline::before {
+    content: none;
+  }
+
+  .terminal-output .founder-deck {
+    max-width: 34rem;
+    margin: 1rem 0 0;
+    color: var(--theme-foreground);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    opacity: 0.76;
+  }
+
+  .terminal-output .founder-bio {
+    max-width: 43rem;
+    margin: 1.35rem 0 1.15rem;
+    color: var(--theme-foreground);
+    font-size: 0.88rem;
+    opacity: 0.82;
+  }
+
+  .intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin: 1.25rem 0 1.5rem;
+  }
+
+  .terminal-output .intro-action {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid color-mix(in srgb, var(--theme-accent) 45%, transparent);
+    border-radius: 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 650;
+    text-decoration: none;
+    transition:
+      background-color 150ms ease,
+      border-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .terminal-output .intro-action.primary {
+    background: var(--theme-accent);
+    color: var(--theme-background);
+  }
+
+  .terminal-output .intro-action.secondary {
+    background: transparent;
+    color: var(--theme-accent);
+  }
+
+  .terminal-output .intro-action:hover {
+    border-color: var(--theme-accent);
+    background: color-mix(in srgb, var(--theme-accent) 86%, var(--theme-background));
+    color: var(--theme-background);
+    text-decoration: none;
+  }
+
+  .terminal-output .intro-action:active {
+    transform: scale(0.96);
+  }
+
+  .proof-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px dashed color-mix(in srgb, var(--theme-foreground) 18%, transparent);
+  }
+
+  .proof-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .proof-item strong {
+    color: var(--theme-foreground);
+    font-size: 0.78rem;
+  }
+
+  .proof-item span {
+    color: var(--theme-foreground);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    opacity: 0.58;
+  }
+
+  .terminal-output .quiet-note {
+    margin: 1.2rem 0 0;
+    padding: 0.75rem 0.9rem;
+    border-left: 2px solid var(--theme-accent);
+    background: color-mix(in srgb, var(--theme-accent) 6%, transparent);
+    color: var(--theme-foreground);
+    font-size: 0.76rem;
+    line-height: 1.55;
+    opacity: 0.78;
   }
 
   @media (max-width: 640px) {
+    .terminal-session {
+      padding: 1rem;
+    }
+
     .intro-section {
       flex-direction: column-reverse;
-      align-items: center;
+      align-items: flex-start;
+      gap: 1.25rem;
     }
 
     .intro-image {
-      width: 140px;
-      height: 140px;
-      margin-bottom: 1rem;
+      width: 104px;
+      height: 104px;
+      margin-bottom: 0;
     }
 
-    .terminal-output .experience-timeline {
-      font-size: 0.8rem;
-      margin: 1rem 0;
+    .terminal-output .founder-headline {
+      font-size: 1.7rem;
     }
 
-    .timeline-item .year {
-      width: 4.5rem;
+    .intro-actions {
+      flex-direction: column;
     }
 
-    .timeline-item .detail {
-      display: block;
-      margin-left: 2.5rem;
-      margin-top: 0.2rem;
+    .terminal-output .intro-action {
+      width: 100%;
+    }
+
+    .proof-strip {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .terminal-output .intro-action {
+      transition: none;
     }
   }
 </style>
