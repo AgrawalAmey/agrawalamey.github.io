@@ -7,7 +7,7 @@ const config: SiteConfig = {
   title: 'Amey Agrawal',
   // The description of your site, used for SEO and RSS feed.
   description:
-    'Systems researcher and technical founder building high-performance infrastructure for real-time, interactive AI.',
+    'Systems researcher building high-performance infrastructure for AI inference. PhD, Georgia Tech.',
   // The author of the site, used in the footer, SEO, and RSS feed.
   author: 'Amey Agrawal',
   // Keywords for SEO, used in the meta tags.
@@ -28,7 +28,7 @@ const config: SiteConfig = {
       url: '/',
     },
     {
-      name: 'Systems',
+      name: 'Research',
       url: '/#selected-systems',
     },
     {

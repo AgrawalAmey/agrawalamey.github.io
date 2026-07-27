@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets'
 import ReactGithubCalendar from './ReactGithubCalendar'
 import type { FrontmatterImage } from '../types'
 
@@ -7,64 +6,44 @@ interface Props {
   avatarImage?: FrontmatterImage
   githubCalendar?: string
 }
-const { avatarImage, githubCalendar } = Astro.props
+
+const { githubCalendar } = Astro.props
 ---
 
-<div class="terminal-session my-4">
-  <div class="terminal-header">
-    <span class="terminal-prompt">$</span>
-    <span class="terminal-command">whoami</span>
-  </div>
-  <div class="terminal-output prose prose-sm sm:prose-base max-w-none">
+<section class="profile-intro">
+  <div class="profile-content prose prose-sm sm:prose-base max-w-none">
     <slot />
   </div>
   {
     githubCalendar && (
-      <div class="mt-8 pt-6 border-t border-dashed border-foreground/20">
-        <div class="terminal-header mb-4">
-          <span class="terminal-prompt">$</span>
-          <span class="terminal-command">git log --graph</span>
-        </div>
+      <div class="github-section">
+        <p class="section-label">Recent activity</p>
         <div class="h-42">
           <ReactGithubCalendar username={githubCalendar} client:only />
         </div>
       </div>
     )
   }
-</div>
+</section>
 
 <style>
-  .terminal-session {
-    font-family: var(--font-mono);
-    margin-bottom: 2.5rem;
-    padding: 1.25rem;
-    border: 1px solid color-mix(in srgb, var(--theme-foreground) 12%, transparent);
-    border-radius: 0.875rem;
-    background: color-mix(in srgb, var(--theme-background) 97%, var(--theme-accent) 3%);
-    box-shadow:
-      0 1px 2px rgb(0 0 0 / 0.08),
-      0 18px 42px rgb(0 0 0 / 0.07);
+  .profile-intro {
+    margin: 2rem 0 2.75rem;
+    font-family: var(--theme-font);
   }
 
-  .terminal-header {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.25rem;
-    font-weight: 600;
+  .github-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid color-mix(in srgb, var(--theme-foreground) 14%, transparent);
   }
 
-  .terminal-prompt {
-    color: var(--theme-accent);
-  }
-
-  .terminal-command {
+  .section-label {
+    margin: 0 0 1rem;
     color: var(--theme-foreground);
-  }
-
-  .terminal-output {
-    padding-top: 0.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    opacity: 0.65;
   }
 </style>
 
@@ -74,270 +53,117 @@ const { avatarImage, githubCalendar } = Astro.props
     stroke-opacity: 0.1 !important;
   }
 
-  .terminal-output p {
-    margin: 0.75rem 0;
-    line-height: 1.65;
+  .profile-content p {
+    margin: 0.8rem 0;
+    line-height: 1.7;
     text-wrap: pretty;
   }
 
-  .terminal-output p:first-child {
-    margin-top: 0;
+  .profile-content a {
+    color: var(--theme-a);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
   }
 
-  .terminal-output a {
-    color: var(--theme-link);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .terminal-output a:hover {
+  .profile-content a:hover {
     color: var(--theme-accent);
   }
 
-  .terminal-output h3 {
-    font-size: 1.1rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    color: var(--theme-accent);
-    font-family: var(--font-mono);
-  }
-
-  .terminal-output h3::before {
-    content: '> ';
-    color: var(--theme-accent);
-    opacity: 0.6;
-  }
-
-  .terminal-output pre {
-    background: color-mix(in srgb, var(--theme-background) 95%, var(--theme-accent) 5%);
-    border: 1px solid var(--theme-accent);
-    border-opacity: 0.3;
-    padding: 0.75rem;
-    margin: 1rem 0;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .terminal-output code {
-    background: transparent;
-    color: var(--theme-foreground);
-  }
-
-  .terminal-output strong {
-    color: var(--theme-accent);
-    font-weight: 600;
-  }
-
-  .terminal-output p strong:first-child {
-    color: var(--theme-h3);
-  }
-
-  .intro-section {
-    display: flex;
-    flex-direction: row;
+  .profile-content .intro-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 116px;
     gap: 2rem;
-    align-items: center;
+    align-items: start;
     margin-bottom: 1.25rem;
   }
 
-  .intro-text {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .intro-image {
-    width: 132px;
-    height: 132px;
-    border-radius: 0.625rem;
-    object-fit: cover;
-    opacity: 0.95;
-    flex-shrink: 0;
-    box-shadow:
-      0 0 0 1px rgb(255 255 255 / 0.1),
-      0 10px 28px rgb(0 0 0 / 0.16);
-  }
-
-  .terminal-output .status-line {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    margin: 0 0 0.9rem;
-    color: var(--theme-foreground);
-    font-size: 0.73rem;
-    letter-spacing: 0.03em;
-    opacity: 0.72;
-  }
-
-  .terminal-output .status-line strong {
-    color: var(--theme-accent);
-    text-transform: uppercase;
-  }
-
-  .status-dot {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background: var(--theme-accent);
-    box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--theme-accent) 14%, transparent);
-  }
-
-  .terminal-output .founder-headline {
+  .profile-content .founder-headline {
     display: block;
-    max-width: 34rem;
+    max-width: 35rem;
     margin: 0;
     color: var(--theme-foreground);
-    font-size: clamp(1.65rem, 4vw, 2.3rem);
-    font-weight: 680;
-    letter-spacing: -0.045em;
-    line-height: 1.08;
+    font-size: clamp(1.65rem, 4vw, 2.15rem);
+    font-weight: 650;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
     text-wrap: balance;
   }
 
-  .terminal-output .founder-headline::before {
+  .profile-content .founder-headline::before {
     content: none;
   }
 
-  .terminal-output .founder-deck {
-    max-width: 34rem;
+  .profile-content .founder-deck {
+    max-width: 35rem;
     margin: 1rem 0 0;
     color: var(--theme-foreground);
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     line-height: 1.65;
-    opacity: 0.76;
-  }
-
-  .terminal-output .founder-bio {
-    max-width: 43rem;
-    margin: 1.35rem 0 1.15rem;
-    color: var(--theme-foreground);
-    font-size: 0.88rem;
-    opacity: 0.82;
-  }
-
-  .intro-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin: 1.25rem 0 1.5rem;
-  }
-
-  .terminal-output .intro-action {
-    display: inline-flex;
-    min-height: 2.75rem;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.55rem 0.85rem;
-    border: 1px solid color-mix(in srgb, var(--theme-accent) 45%, transparent);
-    border-radius: 0.6rem;
-    font-size: 0.78rem;
-    font-weight: 650;
-    text-decoration: none;
-    transition:
-      background-color 150ms ease,
-      border-color 150ms ease,
-      color 150ms ease;
-  }
-
-  .terminal-output .intro-action.primary {
-    background: var(--theme-accent);
-    color: var(--theme-background);
-  }
-
-  .terminal-output .intro-action.secondary {
-    background: transparent;
-    color: var(--theme-accent);
-  }
-
-  .terminal-output .intro-action:hover {
-    border-color: var(--theme-accent);
-    background: color-mix(in srgb, var(--theme-accent) 86%, var(--theme-background));
-    color: var(--theme-background);
-    text-decoration: none;
-  }
-
-  .terminal-output .intro-action:active {
-    transform: scale(0.96);
-  }
-
-  .proof-strip {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
-    padding-top: 1.25rem;
-    border-top: 1px dashed color-mix(in srgb, var(--theme-foreground) 18%, transparent);
-  }
-
-  .proof-item {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  .proof-item strong {
-    color: var(--theme-foreground);
-    font-size: 0.78rem;
-  }
-
-  .proof-item span {
-    color: var(--theme-foreground);
-    font-size: 0.7rem;
-    line-height: 1.4;
-    opacity: 0.58;
-  }
-
-  .terminal-output .quiet-note {
-    margin: 1.2rem 0 0;
-    padding: 0.75rem 0.9rem;
-    border-left: 2px solid var(--theme-accent);
-    background: color-mix(in srgb, var(--theme-accent) 6%, transparent);
-    color: var(--theme-foreground);
-    font-size: 0.76rem;
-    line-height: 1.55;
     opacity: 0.78;
   }
 
+  .profile-content .intro-image {
+    width: 116px;
+    height: 116px;
+    border-radius: 0.35rem;
+    object-fit: cover;
+    opacity: 0.96;
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1);
+  }
+
+  .profile-content .founder-bio {
+    max-width: 43rem;
+    color: var(--theme-foreground);
+    font-size: 0.9rem;
+    opacity: 0.84;
+  }
+
+  .profile-content .current-work {
+    max-width: 43rem;
+    color: var(--theme-foreground);
+    font-size: 0.88rem;
+    opacity: 0.78;
+  }
+
+  .profile-content .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.8rem;
+    margin-top: 1.2rem;
+    font-size: 0.82rem;
+  }
+
+  .profile-content .profile-links a {
+    min-height: 2.5rem;
+    display: inline-flex;
+    align-items: center;
+    color: var(--theme-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .profile-content .profile-links a:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 640px) {
-    .terminal-session {
-      padding: 1rem;
+    .profile-intro {
+      margin-top: 1.5rem;
     }
 
-    .intro-section {
-      flex-direction: column-reverse;
-      align-items: flex-start;
+    .profile-content .intro-section {
+      grid-template-columns: 1fr;
       gap: 1.25rem;
     }
 
-    .intro-image {
-      width: 104px;
-      height: 104px;
-      margin-bottom: 0;
+    .profile-content .intro-image {
+      grid-row: 1;
+      width: 96px;
+      height: 96px;
     }
 
-    .terminal-output .founder-headline {
-      font-size: 1.7rem;
-    }
-
-    .intro-actions {
-      flex-direction: column;
-    }
-
-    .terminal-output .intro-action {
-      width: 100%;
-    }
-
-    .proof-strip {
-      grid-template-columns: 1fr;
-      gap: 0.8rem;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .terminal-output .intro-action {
-      transition: none;
+    .profile-content .founder-headline {
+      font-size: 1.65rem;
     }
   }
 </style>

@@ -56,10 +56,10 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
   }
 
   <section id="selected-systems" aria-labelledby="selected-systems-heading">
-    <BlockHeader><span id="selected-systems-heading">selected systems</span></BlockHeader>
+    <BlockHeader><span id="selected-systems-heading">selected research</span></BlockHeader
+    >
     <p class="section-intro">
-      A throughline from research to what I am building now: make complex AI systems
-      easier to understand, predict, and run well.
+      Selected publications and systems that reflect the main themes of my work.
     </p>
     <div class="featured-projects">
       {
@@ -75,7 +75,7 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
   </section>
 
   <section aria-labelledby="research-archive-heading">
-    <BlockHeader><span id="research-archive-heading">research archive</span></BlockHeader>
+    <BlockHeader><span id="research-archive-heading">all publications</span></BlockHeader>
     <div class="all-projects">
       {archiveProjects.map((project) => <ProjectListing project={project} />)}
     </div>
@@ -98,20 +98,13 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
   }
 
   .featured-projects {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
+    display: flex;
+    flex-direction: column;
     margin: 1.25rem 0 2.5rem;
   }
 
   .all-projects {
     margin: 1.5rem 0;
-  }
-
-  @media (max-width: 640px) {
-    .featured-projects {
-      grid-template-columns: 1fr;
-    }
   }
 </style>
 

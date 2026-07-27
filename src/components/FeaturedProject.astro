@@ -14,90 +14,83 @@ const primaryUrl = links?.pdf || links?.website || links?.code
 
 <article class="featured-project">
   <div class="featured-meta">
-    <span>{eyebrow}</span>
-    {venue && <span class="featured-venue">{venue}</span>}
+    <span class="research-area">{eyebrow}</span>
+    {venue && <span>{venue}</span>}
   </div>
-  <h3>
+  <div class="featured-body">
+    <h3>
+      {
+        primaryUrl ? (
+          <a
+            href={primaryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={title}
+          >
+            {name}
+          </a>
+        ) : (
+          name
+        )
+      }
+    </h3>
+    {description && <p>{description}</p>}
     {
-      primaryUrl ? (
-        <a href={primaryUrl} target="_blank" rel="noopener noreferrer" aria-label={title}>
-          {name}
-        </a>
-      ) : (
-        name
+      links && (
+        <div class="featured-links" aria-label={`Links for ${title}`}>
+          {links.pdf && (
+            <a href={links.pdf} target="_blank" rel="noopener noreferrer">
+              Paper
+            </a>
+          )}
+          {links.code && (
+            <a href={links.code} target="_blank" rel="noopener noreferrer">
+              Code
+            </a>
+          )}
+          {links.video && (
+            <a href={links.video} target="_blank" rel="noopener noreferrer">
+              Talk
+            </a>
+          )}
+        </div>
       )
     }
-  </h3>
-  {description && <p>{description}</p>}
-  {
-    links && (
-      <div class="featured-links" aria-label={`Links for ${title}`}>
-        {links.pdf && (
-          <a href={links.pdf} target="_blank" rel="noopener noreferrer">
-            Paper ↗
-          </a>
-        )}
-        {links.code && (
-          <a href={links.code} target="_blank" rel="noopener noreferrer">
-            Code ↗
-          </a>
-        )}
-        {links.video && (
-          <a href={links.video} target="_blank" rel="noopener noreferrer">
-            Talk ↗
-          </a>
-        )}
-      </div>
-    )
-  }
+  </div>
 </article>
 
 <style>
   .featured-project {
-    display: flex;
-    min-height: 14rem;
-    flex-direction: column;
-    padding: 1.25rem;
-    border: 1px solid color-mix(in srgb, var(--theme-foreground) 12%, transparent);
-    border-radius: 0.75rem;
-    background: color-mix(in srgb, var(--theme-background) 96%, var(--theme-accent) 4%);
-    box-shadow:
-      0 1px 2px rgb(0 0 0 / 0.08),
-      0 12px 30px rgb(0 0 0 / 0.06);
-    transition:
-      border-color 160ms ease,
-      transform 160ms ease,
-      box-shadow 160ms ease;
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid color-mix(in srgb, var(--theme-foreground) 14%, transparent);
   }
 
-  .featured-project:hover {
-    border-color: color-mix(in srgb, var(--theme-accent) 45%, transparent);
-    box-shadow:
-      0 2px 4px rgb(0 0 0 / 0.1),
-      0 16px 36px rgb(0 0 0 / 0.09);
-    transform: translateY(-2px);
+  .featured-project:last-child {
+    border-bottom: 1px solid color-mix(in srgb, var(--theme-foreground) 14%, transparent);
   }
 
   .featured-meta {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    color: var(--theme-accent);
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.15rem;
+    color: var(--theme-foreground);
     font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    line-height: 1.4;
-    text-transform: uppercase;
+    line-height: 1.5;
+    opacity: 0.58;
   }
 
-  .featured-venue {
-    color: var(--theme-foreground);
-    opacity: 0.6;
+  .research-area {
+    color: var(--theme-accent);
+    font-weight: 650;
+    opacity: 1;
   }
 
   h3 {
-    margin: 1rem 0 0;
+    margin: 0;
     color: var(--theme-foreground);
     font-size: 1rem;
     font-weight: 650;
@@ -112,23 +105,24 @@ const primaryUrl = links?.pdf || links?.website || links?.code
 
   h3 a:hover {
     color: var(--theme-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 
   p {
-    margin: 0.75rem 0 1rem;
+    max-width: 35rem;
+    margin: 0.45rem 0 0.6rem;
     color: var(--theme-foreground);
     font-size: 0.82rem;
-    line-height: 1.55;
-    opacity: 0.72;
+    line-height: 1.6;
+    opacity: 0.7;
     text-wrap: pretty;
   }
 
   .featured-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.9rem;
-    margin-top: auto;
-    padding-top: 0.5rem;
+    gap: 1rem;
   }
 
   .featured-links a {
@@ -136,27 +130,25 @@ const primaryUrl = links?.pdf || links?.website || links?.code
     display: inline-flex;
     align-items: center;
     color: var(--theme-accent);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 600;
     text-decoration: none;
-    text-underline-offset: 0.2em;
   }
 
   .featured-links a:hover {
     text-decoration: underline;
+    text-underline-offset: 0.2em;
   }
 
-  .featured-links a:active {
-    transform: scale(0.96);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
+  @media (max-width: 520px) {
     .featured-project {
-      transition: none;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
     }
 
-    .featured-project:hover {
-      transform: none;
+    .featured-meta {
+      flex-direction: row;
+      gap: 0.65rem;
     }
   }
 </style>
