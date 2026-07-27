@@ -6,7 +6,7 @@ avatarImage:
 
 <div class="intro-section">
   <div class="intro-text">
-    <h1 class="founder-headline">Inference systems for interactive AI.</h1>
+    <h1 class="founder-headline">Building inference systems for interactive AI.</h1>
   </div>
   <img src="/content/me.enc" alt="Amey Agrawal" class="intro-image" />
 </div>
