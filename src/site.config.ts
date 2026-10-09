@@ -27,11 +27,6 @@ const config: SiteConfig = {
       name: 'Blog',
       url: '/posts',
     },
-    {
-      name: 'CV',
-      url: '/cv.pdf',
-      external: true,
-    },
   ],
   // The theming configuration for the site.
   themes: {
