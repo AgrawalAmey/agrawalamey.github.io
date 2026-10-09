@@ -6,7 +6,7 @@ import SocialIcons from './SocialIcons.astro'
 
 <header class="font-mono">
   <div class="border border-foreground/20 rounded-sm p-3 mb-4">
-    <div class="flex min-w-0 items-center justify-between gap-4">
+    <div class="flex min-w-0 items-center justify-between gap-2 md:gap-4">
       <a
         id="logo"
         href="/"
@@ -17,7 +17,7 @@ import SocialIcons from './SocialIcons.astro'
         <span class="text-foreground font-semibold md:hidden">~/amey</span>
         <span class="text-accent opacity-70 animate-pulse">_</span>
       </a>
-      <div class="flex shrink-0 items-center gap-2 md:hidden">
+      <div class="flex shrink-0 items-center gap-1 md:hidden">
         <SocialIcons />
         <nav id="nav-mobile" aria-label="Menu">
           <button
@@ -45,7 +45,7 @@ import SocialIcons from './SocialIcons.astro'
       </div>
       <div class="hidden min-w-0 items-center gap-4 md:flex">
         <nav class="min-w-0" aria-label="Menu">
-          <ul class="flex flex-row items-center gap-4 text-sm">
+          <ul class="flex flex-row items-center gap-4 text-(length:--fs-body)">
             {
               siteConfig.navLinks.map((link) => (
                 <li>
