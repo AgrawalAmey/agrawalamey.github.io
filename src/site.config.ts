@@ -108,7 +108,7 @@ const config: SiteConfig = {
   },
   // Social links to display in the footer.
   socialLinks: {
-    email: 'mailto:agrawalamey12@gmail.com',
+    email: 'mailto:amey@avartha.ai',
     scholar:
       'https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate',
     github: 'https://github.com/AgrawalAmey',
