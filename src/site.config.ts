@@ -7,7 +7,7 @@ const config: SiteConfig = {
   title: 'Amey Agrawal',
   // The description of your site, used for SEO and RSS feed.
   description:
-    'Systems researcher working on real-time AI inference. PhD, Georgia Tech.',
+    'Co-founder & CEO of Avartha. PhD, Georgia Tech.',
   // The author of the site, used in the footer, SEO, and RSS feed.
   author: 'Amey Agrawal',
   // Keywords for SEO, used in the meta tags.
@@ -24,21 +24,12 @@ const config: SiteConfig = {
   // The navigation links to display in the header.
   navLinks: [
     {
-      name: 'Research',
-      url: '/#selected-systems',
-    },
-    {
       name: 'Blog',
       url: '/posts',
     },
     {
       name: 'CV',
       url: '/cv.pdf',
-      external: true,
-    },
-    {
-      name: 'Scholar',
-      url: 'https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate',
       external: true,
     },
   ],
@@ -123,9 +114,11 @@ const config: SiteConfig = {
   // Social links to display in the footer.
   socialLinks: {
     email: 'mailto:agrawalamey12@gmail.com',
+    scholar:
+      'https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate',
     github: 'https://github.com/AgrawalAmey',
     linkedin: 'https://linkedin.com/in/agrawalamey',
-    twitter: 'https://twitter.com/agrawalamey12',
+    twitter: 'https://x.com/agrawalamey12',
   },
   // Configuration for Giscus comments.
   // To set up Giscus, follow the instructions at https://giscus.app/

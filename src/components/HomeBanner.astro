@@ -41,7 +41,7 @@ const { githubCalendar } = Astro.props
   .section-label {
     margin: 0 0 1rem;
     color: var(--theme-foreground);
-    font-size: 0.78rem;
+    font-size: var(--fs-meta);
     font-weight: 600;
     opacity: 0.65;
   }
@@ -77,73 +77,26 @@ const { githubCalendar } = Astro.props
     margin-bottom: 1.25rem;
   }
 
-  .profile-content .founder-headline {
-    display: block;
+  .profile-content .founder-deck {
     max-width: 35rem;
     margin: 0;
     color: var(--theme-foreground);
-    font-size: clamp(1.65rem, 4vw, 2.15rem);
-    font-weight: 650;
-    letter-spacing: -0.035em;
-    line-height: 1.15;
-    text-wrap: balance;
+    font-size: var(--fs-body);
+    line-height: 1.7;
   }
 
-  .profile-content .founder-headline::before {
-    content: none;
-  }
-
-  .profile-content .founder-deck {
-    max-width: 35rem;
-    margin: 1rem 0 0;
-    color: var(--theme-foreground);
-    font-size: 0.98rem;
-    line-height: 1.65;
-    opacity: 0.78;
+  .profile-content .founder-deck + .founder-deck {
+    margin-top: 1rem;
   }
 
   .profile-content .intro-image {
     width: 116px;
     height: 116px;
     border-radius: 0.35rem;
+    margin: 0;
     object-fit: cover;
     opacity: 0.96;
     box-shadow: 0 0 0 1px rgb(255 255 255 / 0.1);
-  }
-
-  .profile-content .founder-bio {
-    max-width: 43rem;
-    color: var(--theme-foreground);
-    font-size: 0.9rem;
-    opacity: 0.84;
-  }
-
-  .profile-content .current-work {
-    max-width: 43rem;
-    color: var(--theme-foreground);
-    font-size: 0.88rem;
-    opacity: 0.78;
-  }
-
-  .profile-content .profile-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.45rem 0.8rem;
-    margin-top: 1.2rem;
-    font-size: 0.82rem;
-  }
-
-  .profile-content .profile-links a {
-    min-height: 2.5rem;
-    display: inline-flex;
-    align-items: center;
-    color: var(--theme-accent);
-    font-weight: 600;
-    text-decoration: none;
-  }
-
-  .profile-content .profile-links a:hover {
-    text-decoration: underline;
   }
 
   @media (max-width: 640px) {
@@ -160,10 +113,6 @@ const { githubCalendar } = Astro.props
       grid-row: 1;
       width: 96px;
       height: 96px;
-    }
-
-    .profile-content .founder-headline {
-      font-size: 1.65rem;
     }
   }
 </style>

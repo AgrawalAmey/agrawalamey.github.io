@@ -39,6 +39,7 @@ const projectsCollection = defineCollection({
         website: z.string().optional(),
       }).optional(),
       featured: z.boolean().optional().default(false),
+      draft: z.boolean().optional().default(false),
       thumbnail: z.string().optional(),
       coverImage: z
         .strictObject({

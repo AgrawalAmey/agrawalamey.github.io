@@ -6,13 +6,8 @@ avatarImage:
 
 <div class="intro-section">
   <div class="intro-text">
-    <h1 class="founder-headline">Building inference systems for interactive AI.</h1>
+    <p class="founder-deck">I'm co-founder and CEO of <a href="https://avartha.ai">Avartha</a>. Today, real-time AI such as voice runs on small models because frontier models are too slow. We're rebuilding the inference stack so that real-time applications can use the most capable models.</p>
+    <p class="founder-deck">Avartha spun out of the Systems for AI Lab at Georgia Tech, where I completed my CS PhD with <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>. Our scheduling and parallelism work, including chunked prefills from Sarathi-Serve, runs in vLLM, SGLang, and TensorRT-LLM. Before that, I built training infrastructure at Microsoft Research and Qubole.</p>
   </div>
   <img src="/content/me.enc" alt="Amey Agrawal" class="intro-image" />
 </div>
-
-<p class="founder-bio">I recently completed my CS PhD at Georgia Tech, advised by <a href="https://faculty.cc.gatech.edu/~atumanov/">Prof. Alexey Tumanov</a>. My work co-designs scheduling, parallelism, memory, communication, simulation, and emulation across the inference stack. Previously at Microsoft Research, Azure Systems Research, and Qubole.</p>
-
-<p class="current-work"><strong>Current work.</strong> Low-latency streaming inference across systems, workloads, and hardware.</p>
-
-<p class="profile-links"><a href="mailto:agrawalamey12@gmail.com">Email</a><a href="/cv.pdf">CV</a><a href="https://scholar.google.co.in/citations?hl=en&user=CXqdg3oAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a><a href="https://github.com/AgrawalAmey">GitHub</a></p>

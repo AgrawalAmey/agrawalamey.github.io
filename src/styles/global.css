@@ -35,6 +35,16 @@ header {
   navigation: auto;
 }
 
+/* Type scale: every homepage text size uses one of these four steps. */
+:root {
+  --fs-meta: 0.75rem;
+  --fs-body: 0.875rem;
+  --fs-title: 1rem;
+  --fs-heading: 1.25rem;
+  /* Muted text for secondary details; themes only supply foreground. */
+  --theme-text-subtle: color-mix(in srgb, var(--theme-foreground) 62%, transparent);
+}
+
 body {
   @apply transition-colors;
   font-display: block;

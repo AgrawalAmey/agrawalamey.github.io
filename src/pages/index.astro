@@ -22,17 +22,11 @@ if (home.length > 0) {
   homeGithubCalendar = homeEntry.data.githubCalendar
 }
 const sortedPosts = await getSortedPosts()
-const projects = await getCollection('projects')
+const projects = await getCollection('projects', ({ data }) => !data.draft)
 const sortedProjects = projects.sort(
   (a, b) => b.data.published.getTime() - a.data.published.getTime(),
 )
 const featuredProjectOrder = ['sarathi-serve', 'vidur', 'medha', 'revati']
-const featuredEyebrows: Record<string, string> = {
-  'sarathi-serve': 'Scheduling + execution',
-  vidur: 'Capacity planning',
-  medha: 'Long-context serving',
-  revati: 'Emulation',
-}
 const featuredNames: Record<string, string> = {
   'sarathi-serve': 'Sarathi-Serve',
   vidur: 'Vidur',
@@ -67,7 +61,6 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
         featuredProjects.map((project) => (
           <FeaturedProject
             project={project}
-            eyebrow={featuredEyebrows[project.id]}
             name={featuredNames[project.id]}
           />
         ))
@@ -81,6 +74,33 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
       {archiveProjects.map((project) => <ProjectListing project={project} />)}
     </div>
   </section>
+
+  <script is:inline>
+    ;(() => {
+      if (!('IntersectionObserver' in window)) return
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+      // Only content below the fold animates; what's on screen at load stays put.
+      const targets = [
+        ...document.querySelectorAll(
+          'main section > h1, .section-intro, .featured-project, .project-item',
+        ),
+      ].filter((el) => el.getBoundingClientRect().top > window.innerHeight)
+      targets.forEach((el) => el.setAttribute('data-reveal', ''))
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries
+            .filter((entry) => entry.isIntersecting)
+            .forEach((entry, i) => {
+              entry.target.style.setProperty('--reveal-delay', `${Math.min(i, 4) * 50}ms`)
+              entry.target.setAttribute('data-reveal', 'in')
+              observer.unobserve(entry.target)
+            })
+        },
+        { rootMargin: '0px 0px -8% 0px' },
+      )
+      targets.forEach((el) => observer.observe(el))
+    })()
+  </script>
 </Layout>
 
 <style>
@@ -92,7 +112,7 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
     max-width: 42rem;
     margin: -0.25rem 0 1.25rem;
     color: var(--theme-foreground);
-    font-size: 0.9rem;
+    font-size: var(--fs-body);
     line-height: 1.65;
     opacity: 0.7;
     text-wrap: pretty;
@@ -110,6 +130,19 @@ const archiveProjects = sortedProjects.filter((project) => !featuredIds.has(proj
 </style>
 
 <style is:global>
+  [data-reveal] {
+    transition-property: opacity, translate;
+    transition-duration: 0.35s;
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  /* !important beats component opacity rules; it drops away once revealed. */
+  [data-reveal=''] {
+    opacity: 0 !important;
+    translate: 0 0.25rem;
+  }
+
   a.heading-anchor {
     display: none !important;
   }
